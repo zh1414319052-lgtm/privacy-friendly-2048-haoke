@@ -272,7 +272,7 @@ public class StatsActivity extends BaseActivity {
             if (gameStatistics.getMoves() != 0)
                 tpm.setText("" + formatSmallMillis(gameStatistics.getTimePlayed() / gameStatistics.getMoves()));
             else
-                tpm.setText("0");
+                tpm.setText(formatSmallMillis(0L));
             rekord.setText("" + gameStatistics.getRecord());
 
 
@@ -287,13 +287,13 @@ public class StatsActivity extends BaseActivity {
             }
             Double seconds = new Double(((double) timeInMillis) / (double) TimeUnit.SECONDS.toMillis(1));
             StringBuilder sb = new StringBuilder(",##0.00");
-            DecimalFormat df = new DecimalFormat(sb.toString());
+            DecimalFormat df = new DecimalFormat(sb.toString(), java.text.DecimalFormatSymbols.getInstance(
+                    org.secuso.privacyfriendly2048.helpers.AppLanguage.systemLanguage()));
             df.setRoundingMode(RoundingMode.HALF_UP);
             final StringBuilder formatted = new StringBuilder(20);
             formatted.append(sign);
             formatted.append(df.format(seconds));
-            formatted.append(" s");
-            return formatted.toString();
+            return getString(R.string.duration_seconds, formatted.toString());
         }
 
         public String formatMillis(long timeInMillis) {
@@ -304,13 +304,13 @@ public class StatsActivity extends BaseActivity {
             }
             Double seconds = new Double(((double) timeInMillis) / (double) TimeUnit.HOURS.toMillis(1));
             StringBuilder sb = new StringBuilder(",##0.00");
-            DecimalFormat df = new DecimalFormat(sb.toString());
+            DecimalFormat df = new DecimalFormat(sb.toString(), java.text.DecimalFormatSymbols.getInstance(
+                    org.secuso.privacyfriendly2048.helpers.AppLanguage.systemLanguage()));
             df.setRoundingMode(RoundingMode.HALF_UP);
             final StringBuilder formatted = new StringBuilder(20);
             formatted.append(sign);
             formatted.append(df.format(seconds));
-            formatted.append(" h");
-            return formatted.toString();
+            return getString(R.string.duration_hours, formatted.toString());
         }
 
         @Override

@@ -1,0 +1,12 @@
+<resources>
+    <color name="challenge_screen">#17242D</color>
+    <color name="challenge_surface">#233542</color>
+    <color name="challenge_title">#E7F4FD</color>
+    <color name="challenge_muted">#B9D0DE</color>
+    <color name="challenge_edge">#49616F</color>
+    <color name="challenge_accent">#91D5FF</color>
+    <color name="challenge_notice">#294B62</color>
+    <color name="challenge_board_base">#3B505F</color>
+    <color name="challenge_cell_empty">#536776</color>
+    <color name="challenge_stone">#24313B</color>
+</resources>

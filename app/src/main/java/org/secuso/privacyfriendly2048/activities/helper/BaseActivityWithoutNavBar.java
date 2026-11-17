@@ -23,7 +23,6 @@ import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import org.secuso.privacyfriendly2048.R;
 
@@ -40,7 +39,7 @@ import org.secuso.privacyfriendly2048.R;
  * Also the main layout that holds the content of the activity should have the id 'main_content'.
  * This way it will automatically fade in and out every time a transition is happening.
  */
-public abstract class BaseActivityWithoutNavBar extends AppCompatActivity {
+public abstract class BaseActivityWithoutNavBar extends LocalizedActivity {
 
 
     static final int NAVDRAWER_LAUNCH_DELAY = 250;

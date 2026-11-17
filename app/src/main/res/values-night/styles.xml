@@ -2,11 +2,15 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="fontFamily">@font/board_sans</item>
+        <item name="android:fontFamily">@font/board_sans</item>
 		<item name="secusoLogoDrawable">@drawable/secuso_logo_white</item>
         <item name="android:windowBackground">#282828</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 

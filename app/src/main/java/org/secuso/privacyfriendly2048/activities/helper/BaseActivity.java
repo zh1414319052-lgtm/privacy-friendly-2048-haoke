@@ -29,7 +29,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.TaskStackBuilder;
 import androidx.core.view.GravityCompat;
@@ -42,6 +41,7 @@ import org.secuso.privacyfriendly2048.R;
 import org.secuso.privacyfriendly2048.activities.AboutActivity;
 import org.secuso.privacyfriendly2048.activities.HelpActivity;
 import org.secuso.privacyfriendly2048.activities.MainActivity;
+import org.secuso.privacyfriendly2048.activities.ChallengeMenuActivity;
 import org.secuso.privacyfriendly2048.activities.SettingsActivity;
 import org.secuso.privacyfriendly2048.activities.StatsActivity;
 import org.secuso.privacyfriendly2048.activities.TutorialActivity;
@@ -59,7 +59,7 @@ import org.secuso.privacyfriendly2048.activities.TutorialActivity;
  * Also the main layout that holds the content of the activity should have the id 'main_content'.
  * This way it will automatically fade in and out every time a transition is happening.
  */
-public abstract class BaseActivity extends AppCompatActivity implements OnNavigationItemSelectedListener {
+public abstract class BaseActivity extends LocalizedActivity implements OnNavigationItemSelectedListener {
 
     // delay to launch nav drawer item, to allow close animation to play
     public static final int NAVDRAWER_LAUNCH_DELAY = 250;
@@ -108,6 +108,11 @@ public abstract class BaseActivity extends AppCompatActivity implements OnNaviga
 
     protected boolean goToNavigationItem(final int itemId) {
 
+        if (itemId == R.id.nav_challenge_modes) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, ChallengeMenuActivity.class));
+            return true;
+        }
         if (itemId == getNavigationDrawerID()) {
             // just close drawer because we are already in this activity
             mDrawerLayout.closeDrawer(GravityCompat.START);

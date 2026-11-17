@@ -8,18 +8,39 @@ plugins {
 android {
     namespace 'org.secuso.privacyfriendly2048'
     defaultConfig {
-        applicationId 'org.secuso.privacyfriendly2048'
+        applicationId 'org.secuso.privacyfriendly2048.haoke'
         minSdkVersion 21
         targetSdkVersion 34
         compileSdk 34
-        versionCode 100
-        versionName "1.4.2"
+        versionCode 108
+        versionName "1.4.2-haoke.3"
+        testInstrumentationRunner "org.secuso.privacyfriendly2048.LanguageProbe"
     }
+    signingConfigs {
+        formal {
+            if (System.getenv('PF2048_KEYSTORE')) {
+                storeFile file(System.getenv('PF2048_KEYSTORE'))
+                storePassword System.getenv('PF2048_STORE_PASS')
+                keyAlias System.getenv('PF2048_KEY_ALIAS')
+                keyPassword System.getenv('PF2048_KEY_PASS')
+            }
+        }
+    }
+    testBuildType project.hasProperty('formalTest') ? 'release' : 'debug'
     buildTypes {
+        debug {
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-qa.7"
+        }
         release {
+            signingConfig signingConfigs.formal
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
     }
 
     compileOptions {
@@ -56,6 +77,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.14.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -78,4 +100,8 @@ dependencies {
             because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
         }
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
 }

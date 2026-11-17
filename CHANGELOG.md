@@ -1,3 +1,7 @@
+## 1.4.2-haoke.3 (108) — 2026-11-17
+
+Haoke ceramic edition: classic 4×4–7×7 plus Sprint, Puzzles, Obstacles, Fibonacci and Daily; native ceramic UI, adaptive icon and seven sounds. Fix classic tile initialization after layout to prevent zero-sized tiles and misplaced numbers. Includes regression coverage for all classic sizes and recreation. Corresponding source publication preserves upstream attribution and pinned Backup API. [Release details](docs/SOURCE_RELEASE.json).
+
 # Changelog
 
 <a name="v1.4.0"></a>

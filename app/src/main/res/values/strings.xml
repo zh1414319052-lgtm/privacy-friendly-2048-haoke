@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">2048</string>
+    <string name="app_name">Privacy Friendly 2048</string>
     <string name="app_name_long">Privacy Friendly 2048</string>
 
     <!-- ###DRAWER###-->
     <string name="action_help">Help</string>
     <string name="action_about">About</string>
     <string name="action_settings">Settings</string>
-    <string name="action_main">Main</string>
+    <string name="action_main">Home</string>
     <string name="action_tutorial">Tutorial</string>
     <string name="action_stat">Statistics</string>
 
@@ -21,24 +21,24 @@
     <!--###HELP###-->
     <string name="help">Help</string>
 
-    <string name="help_whatis">What is Privacy Friendly App 2048?</string>
-    <string name="help_whatis_answer">The Privacy Friendly App 2048 is a privacy friendly version of the well-known original game 2048. It has the same functions without using data from the user.</string>
-    <string name="help_color">How can I change the color spectre of the game?</string>
-    <string name="help_color_answer">In the chapter configurations is an option to change between two color spectre for the game.</string>
+    <string name="help_whatis">What is Privacy Friendly 2048?</string>
+    <string name="help_whatis_answer">It is an offline version of the classic 2048 puzzle. Your games and statistics are stored on your device.</string>
+    <string name="help_color">How do I change the board colors?</string>
+    <string name="help_color_answer">Open Settings and choose a board color scheme. You can also change the app theme separately.</string>
     <string name="help_play">What is the goal of this game?</string>
-    <string name="help_play_answer">The goal of this game to get the number 2048. With combining numbers with the same value you can reach higher and higher numbers. You can find an extensive explanation under the topic tutorial.</string>
+    <string name="help_play_answer">Combine matching numbers to reach 2048. You can choose to keep playing for a higher tile.</string>
     <string name="help_play_how">How do I move the numbers?</string>
-    <string name="help_play_how_answer">Swipe the display with your finger in the direction in which you want the numbers to move. </string>
+    <string name="help_play_how_answer">Swipe across the board in the direction you want all tiles to move.</string>
     <string name="help_play_add">How do I reach higher numbers?</string>
-    <string name="help_play_add_answer">If two equal numbers are pushed into each other, they add up to the next higher power of two.</string>
+    <string name="help_play_add_answer">When two tiles with the same number meet, they merge into one tile worth twice as much.</string>
     <string name="help_undo">Is it possible to undo steps?</string>
-    <string name="help_undo_answer">The app gives you the option to undo your last step in the game. You have to click on the button with the arrow against clockwise direction.</string>
+    <string name="help_undo_answer">Tap the curved arrow to undo your most recent move.</string>
     <string name="help_tip">How to beat the game?</string>
-    <string name="help_tip_answer">There are a few strategies to win this game. On YouTube you can find a lot of videos which are covering this topic.</string>
+    <string name="help_tip_answer">Try keeping your largest tile in one corner and building smaller tiles beside it.</string>
     <string name="help_privacy">What makes the app privacy friendly?</string>
-    <string name="help_privacy_answer">This privacy friendly app does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
-    <string name="help_permission">Which permissions requires the app?</string>
-    <string name="help_permission_answer">This app does not require any permission.</string>
+    <string name="help_privacy_answer">The game works offline and has no ads or tracking.</string>
+    <string name="help_permission">Does the game need access to personal data?</string>
+    <string name="help_permission_answer">The game does not ask for access to your contacts, location, photos, or other personal data to play.</string>
 
     <!-- ### WELCOME DIALOG ### -->
     <string name="okay">Okay</string>
@@ -54,14 +54,14 @@
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Karlsruhe Institute of Technology (KIT). Sourcecode licensed under GPLv3. Images copyright KIT and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-2048">Github-Repo</a></string>
-    <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-2048">GitHub repository</a></string>
+    <string name="url"><a href="https://www.secuso.org/pfa">SECUSO website</a></string>
 
     <!-- ###SETTINGS### -->
     <string name="settings_name">Settings</string>
-    <string name="settings_animation">Activate Animation</string>
-    <string name="settings_display">Activate Screen Lock</string>
-    <string name="settings_color">Select Color Scheme</string>
+    <string name="settings_animation">Tile animations</string>
+    <string name="settings_display">Keep screen on</string>
+    <string name="settings_color">Board color scheme</string>
     <string name="settings_color_system">System</string>
     <string name="settings_color_light">Light</string>
     <string name="settings_color_dark">Dark</string>
@@ -71,31 +71,31 @@
     <!-- ### CHOOSE DIALOG ### -->
     <string name="new_Game_Button">Start New Game</string>
     <string name="continue_Game_Button">Continue Game</string>
-    <string name="Record_Button">Record</string>
-    <string name="Points_Button">Points</string>
+    <string name="Record_Button">Best</string>
+    <string name="Points_Button">Score</string>
     <string name="Winning_Message">You won. Would you like to continue?</string>
     <string name="Yes_Message">Yes</string>
     <string name="No_Message">No</string>
     <string name="Titel_V_Message">Victory</string>
     <string name="Titel_L_Message">Achieved Score: %1$d</string>
-    <string name="Lost_Message">No more moves are possible. Your achieved score was: %1$d. Would you like to start a new game?</string>
+    <string name="Lost_Message">No moves left. Your final score is %1$d. Start a new game?</string>
 
 
     <!-- ###TUTORIAL### -->
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="Tutorial_Titel">Welcome!</string>
-    <string name="Tutorial_Instruction">In the following slides you will learn how to play the Game 2048.</string>
-    <string name="Tutorial_Titel_Move">Learn how to move the numbers!</string>
-    <string name="Tutorial_Move">To move all the numbers in the possible position in one direction, you have to swipe your finger in the same way.</string>
-    <string name="Tutorial_Titel_Add">How to Combine the Numbers!</string>
-    <string name="Tutorial_Add">To get the next higher power of 2 you have to combine numbers with the same value. The goal is to reach 2048 and higher.</string>
+    <string name="Tutorial_Instruction">Learn to slide and merge tiles to reach 2048.</string>
+    <string name="Tutorial_Titel_Move">Slide the tiles</string>
+    <string name="Tutorial_Move">Swipe in any direction to move all the tiles as far as they can go.</string>
+    <string name="Tutorial_Titel_Add">Merge matching numbers</string>
+    <string name="Tutorial_Add">Two matching numbers merge into one tile worth twice as much. Keep merging until you reach 2048 or higher.</string>
 
     <!-- ###STATISTICS### -->
     <string name="Stat_High_Number">Highest Number</string>
     <string name="Stat_High_Point">Highest Score</string>
-    <string name="Stat_Amount_Undo">Used Undo-Button</string>
-    <string name="Stat_Amount_Swipe">Total Amount of Swipes</string>
+    <string name="Stat_Amount_Undo">Undos</string>
+    <string name="Stat_Amount_Swipe">Total swipes</string>
     <string name="Stat_Swipes_Left">Left</string>
     <string name="Stat_Swipes_Right">Right</string>
     <string name="Stat_Swipes_Down">Down</string>
@@ -111,4 +111,19 @@
     <string name="swipe_right">Swipe Right</string>
     <string name="undo">Undo</string>
 
+
+    <string name="launcher_name">Privacy Friendly 2048</string>
+    <string name="upstream_name">Privacy Friendly 2048</string>
+    <string name="settings_theme">App theme</string>
+    <string name="previous_board">Previous board size</string>
+    <string name="next_board">Next board size</string>
+    <string name="restart_game">Restart game</string>
+    <string name="duration_seconds">%1$s s</string>
+    <string name="duration_hours">%1$s h</string>
+    <string name="confirm_replace_title">Replace saved game?</string>
+    <string name="confirm_replace_message">Starting a new %1$d × %1$d game will replace the saved game for this board size.</string>
+    <string name="confirm_restart_title">Start this game again?</string>
+    <string name="confirm_restart_message">The board will be reset.\nYour best score will be kept.</string>
+    <string name="cancel">Cancel</string>
+    <string name="replace_game">Replace game</string>
 </resources>

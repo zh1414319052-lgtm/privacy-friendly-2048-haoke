@@ -36,3 +36,17 @@ Thumbs.db
 # APKs
 *.apk
 
+
+# Local maintenance state and sensitive/build artifacts
+/docs/HAOKE_HANDOFF.json
+/art/ui/fidelity/
+*.collab.sqlite3*
+__pycache__/
+*.pyc
+.kotlin/
+**/build/
+*.jks
+*.keystore
+*.dpapi
+.env
+.env.*

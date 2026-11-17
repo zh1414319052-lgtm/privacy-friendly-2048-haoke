@@ -1,0 +1,40 @@
+{
+  "versionName": "1.4.2-haoke.3",
+  "versionCode": 108,
+  "platform": "Android",
+  "applicationId": "org.secuso.privacyfriendly2048.haoke",
+  "sourceRepository": "https://github.com/zh1414319052-lgtm/privacy-friendly-2048-haoke",
+  "sourceBranch": "haoke",
+  "sourceTag": "v1.4.2-haoke.3",
+  "productPage": "https://www.haoke.org/software/b8597da489231e77",
+  "upstream": "https://github.com/SecUSo/privacy-friendly-2048",
+  "upstreamCommit": "4ee3cf356376c1f8905f81a02ffc9f37b3db6c96",
+  "license": "GPL-3.0-or-later",
+  "artifactBytes": 22491775,
+  "artifactSha256": "86849eb040b435fdffef1a524e9851d2ca3e0f41a9317650c8182f4c17d5754a",
+  "certificateSha256": "572cf1d85c695372bbab8b6036bb83259384bc0ed5379e840ed854561a2f4ba9",
+  "backupApiCommit": "8687a8dbd170866707dc41bcb879375400ef697a",
+  "verificationDate": "2026-11-17",
+  "verification": {
+    "releaseBuild": "passed",
+    "releaseUnitTests": 15,
+    "releaseLint": "passed",
+    "physicalDevice": "OnePlus, Android 16, versionCode 108, same-signature upgrade and installed APK hash matched",
+    "currentScope": [
+      "classic layout/move/undo",
+      "five challenge modes interaction",
+      "puzzle 1 completion and next level"
+    ],
+    "previousVersion107Scope": [
+      "five modes undo/resume",
+      "cold-start persistence"
+    ]
+  },
+  "sourcePublicationOnlyChanges": [
+    "documentation",
+    "portable font paths in asset export helpers",
+    "portable design metadata paths"
+  ],
+  "binaryUploadedToGitHub": false,
+  "clientUpdateChannelEnabled": false
+}

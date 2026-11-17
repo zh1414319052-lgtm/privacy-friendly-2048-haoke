@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_modes">Game modes</string>
+    <string name="mode_sprint">3 × 3 Sprint</string>
+    <string name="mode_puzzle">Puzzle challenges</string>
+    <string name="mode_obstacles">Obstacle board</string>
+    <string name="mode_fibonacci">Fibonacci</string>
+    <string name="mode_daily">Daily challenge</string>
+    <string name="mode_sprint_desc">Nine cells. Reach 256, then take on 512.</string>
+    <string name="mode_puzzle_desc">Solve fixed boards within a move limit. No new tiles appear.</string>
+    <string name="mode_obstacles_desc">Two stones split the board into separate lanes. Tiles cannot slide through them.</string>
+    <string name="mode_fibonacci_desc">Merge neighbors in the sequence: 1 + 1 → 2, 1 + 2 → 3, 2 + 3 → 5.</string>
+    <string name="mode_daily_desc">One fixed puzzle each day. Replay to improve your best.</string>
+    <string name="challenge_pick_level">Choose a puzzle</string>
+    <string name="challenge_level">Puzzle %1$d</string>
+    <string name="challenge_level_count">%1$d puzzles · %2$d solved</string>
+    <string name="challenge_resume">In progress</string>
+    <string name="challenge_best_score">Best %1$d</string>
+    <string name="challenge_best_moves">Best %1$d moves</string>
+    <string name="challenge_score_label">Score</string>
+    <string name="challenge_record_label">Best score</string>
+    <string name="challenge_remaining_label">Moves left</string>
+    <string name="challenge_record_moves_label">Fewest moves</string>
+    <string name="challenge_attempts_label">Moves</string>
+    <string name="challenge_restart">Restart</string>
+    <string name="challenge_restart_question">Restart this board?</string>
+    <string name="challenge_restart_detail">The board will reset. Your best result stays saved.</string>
+    <string name="challenge_next">Next puzzle</string>
+    <string name="challenge_list">Puzzle list</string>
+    <string name="challenge_goal_tile">Make a %1$d tile</string>
+    <string name="challenge_goal_space">Make at least %1$d empty cells</string>
+    <string name="challenge_goal_score">Score %1$d points</string>
+    <string name="challenge_move_limit">Up to %1$d moves</string>
+    <string name="challenge_no_spawn">No new tiles appear after a move.</string>
+    <string name="challenge_solved">Solved in %1$d moves</string>
+    <string name="challenge_out_of_moves">Move limit reached. Undo or try again.</string>
+    <string name="challenge_stuck">No moves left. Undo or restart.</string>
+    <string name="challenge_sprint_half">256 reached. Aim for 512.</string>
+    <string name="challenge_reached">%1$d reached. Keep playing for a bigger tile.</string>
+    <string name="challenge_empty_cell">Empty cell</string>
+    <string name="challenge_stone_cell">Stone. Tiles cannot cross.</string>
+    <string name="challenge_save_error">Progress could not be saved. Try again.</string>
+    <string name="challenge_board_label">Game board. Swipe to move tiles.</string>
+</resources>

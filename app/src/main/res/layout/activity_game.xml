@@ -32,6 +32,7 @@
 
                     <ImageButton
                         android:id="@+id/restartButton"
+                        android:contentDescription="@string/restart_game"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentBottom="true"
@@ -48,6 +49,7 @@
 
                     <ImageButton
                         android:id="@+id/undoButton"
+                        android:contentDescription="@string/undo"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentBottom="true"
@@ -58,30 +60,24 @@
                         android:visibility="invisible"
                         app:srcCompat="@drawable/undobutton" />
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="85dp"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginEnd="45dp">
+                        android:layout_marginEnd="45dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
+                            style="@style/GameScoreLabel"
                             android:text="@string/Record_Button" />
 
                         <TextView
                             android:id="@+id/record"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginBottom="5dp"
-                            android:text="0"
-                            android:textAlignment="center" />
-                    </RelativeLayout>
+                            style="@style/GameScoreValue"
+                            android:text="0" />
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -94,28 +90,22 @@
                         android:textSize="36sp"
                         android:textStyle="bold" />
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="85dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true">
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
+                            style="@style/GameScoreLabel"
                             android:text="@string/Points_Button" />
 
                         <TextView
                             android:id="@+id/points"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginBottom="5dp"
-                            android:text="0"
-                            android:textAlignment="center" />
-                    </RelativeLayout>
+                            style="@style/GameScoreValue"
+                            android:text="0" />
+                    </LinearLayout>
 
                 </RelativeLayout>
 

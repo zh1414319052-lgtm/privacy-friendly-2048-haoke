@@ -1,0 +1,515 @@
+{
+  "tile-ivory": {
+    "file": "tile-ivory.png",
+    "width": 256,
+    "height": 264,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 8,
+    "kind": "gloss",
+    "base": "#ECECEB",
+    "bevel": 9
+  },
+  "tile-warm-ivory": {
+    "file": "tile-warm-ivory.png",
+    "width": 256,
+    "height": 264,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 8,
+    "kind": "gloss",
+    "base": "#F1ECE2",
+    "bevel": 9
+  },
+  "tile-ice": {
+    "file": "tile-ice.png",
+    "width": 256,
+    "height": 264,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 8,
+    "kind": "gloss",
+    "base": "#B7E5ED",
+    "bevel": 5
+  },
+  "tile-cyan": {
+    "file": "tile-cyan.png",
+    "width": 256,
+    "height": 265,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 9,
+    "kind": "gloss",
+    "base": "#A3DEEA",
+    "bevel": 5
+  },
+  "tile-teal": {
+    "file": "tile-teal.png",
+    "width": 256,
+    "height": 265,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 9,
+    "kind": "gloss",
+    "base": "#2E86A0",
+    "bevel": 5
+  },
+  "tile-deep": {
+    "file": "tile-deep.png",
+    "width": 256,
+    "height": 265,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 9,
+    "kind": "gloss",
+    "base": "#164E63",
+    "bevel": 5
+  },
+  "tile-sand": {
+    "file": "tile-sand.png",
+    "width": 256,
+    "height": 265,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 9,
+    "kind": "gloss",
+    "base": "#EDD8B3",
+    "bevel": 5
+  },
+  "tile-gold": {
+    "file": "tile-gold.png",
+    "width": 256,
+    "height": 265,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 9,
+    "kind": "gloss",
+    "base": "#F3C068",
+    "bevel": 5
+  },
+  "tile-orange": {
+    "file": "tile-orange.png",
+    "width": 256,
+    "height": 265,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 25,
+    "depth": 9,
+    "kind": "gloss",
+    "base": "#E5A054",
+    "bevel": 5
+  },
+  "tile-stone": {
+    "file": "tile-stone.png",
+    "width": 256,
+    "height": 264,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 21,
+    "depth": 8,
+    "kind": "gloss",
+    "base": "#82949B",
+    "bevel": 5
+  },
+  "hole-light": {
+    "file": "hole-light.png",
+    "width": 256,
+    "height": 256,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 24,
+    "depth": 0,
+    "kind": "inset",
+    "base": "#B5D1DD",
+    "bevel": 10
+  },
+  "hole-teal": {
+    "file": "hole-teal.png",
+    "width": 256,
+    "height": 256,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 24,
+    "depth": 0,
+    "kind": "inset",
+    "base": "#6595A4",
+    "bevel": 10
+  },
+  "hole-dark": {
+    "file": "hole-dark.png",
+    "width": 256,
+    "height": 256,
+    "body": [
+      28,
+      28,
+      200,
+      200
+    ],
+    "radius": 24,
+    "depth": 0,
+    "kind": "inset",
+    "base": "#203F50",
+    "bevel": 10
+  },
+  "tray-light": {
+    "file": "tray-light.png",
+    "width": 895,
+    "height": 936,
+    "body": [
+      34,
+      34,
+      827,
+      846
+    ],
+    "radius": 46,
+    "depth": 22,
+    "kind": "gloss",
+    "base": "#ACCCD9",
+    "bevel": 12
+  },
+  "tray-teal": {
+    "file": "tray-teal.png",
+    "width": 894,
+    "height": 936,
+    "body": [
+      34,
+      34,
+      826,
+      846
+    ],
+    "radius": 46,
+    "depth": 22,
+    "kind": "gloss",
+    "base": "#4FA0AE",
+    "bevel": 12
+  },
+  "well-teal": {
+    "file": "well-teal.png",
+    "width": 842,
+    "height": 862,
+    "body": [
+      28,
+      28,
+      786,
+      806
+    ],
+    "radius": 30,
+    "depth": 0,
+    "kind": "inset",
+    "base": "#3D7F92",
+    "bevel": 10
+  },
+  "tray-dark": {
+    "file": "tray-dark.png",
+    "width": 672,
+    "height": 686,
+    "body": [
+      26,
+      26,
+      620,
+      620
+    ],
+    "radius": 34,
+    "depth": 14,
+    "kind": "gloss",
+    "base": "#316174",
+    "bevel": 10
+  },
+  "nav-primary": {
+    "file": "nav-primary.png",
+    "width": 240,
+    "height": 140,
+    "body": [
+      20,
+      20,
+      200,
+      94
+    ],
+    "radius": 46,
+    "depth": 6,
+    "kind": "gloss",
+    "base": "#123D50",
+    "bevel": 6
+  },
+  "nav-light": {
+    "file": "nav-light.png",
+    "width": 240,
+    "height": 140,
+    "body": [
+      20,
+      20,
+      200,
+      94
+    ],
+    "radius": 46,
+    "depth": 6,
+    "kind": "gloss",
+    "base": "#E8F5F8",
+    "bevel": 6
+  },
+  "primary": {
+    "file": "primary.png",
+    "width": 850,
+    "height": 181,
+    "body": [
+      25,
+      25,
+      800,
+      124
+    ],
+    "radius": 34,
+    "depth": 7,
+    "kind": "gloss",
+    "base": "#103C50",
+    "bevel": 5
+  },
+  "accent": {
+    "file": "accent.png",
+    "width": 443,
+    "height": 168,
+    "body": [
+      24,
+      24,
+      395,
+      112
+    ],
+    "radius": 29,
+    "depth": 8,
+    "kind": "gloss",
+    "base": "#218CA2",
+    "bevel": 5
+  },
+  "disabled": {
+    "file": "disabled.png",
+    "width": 443,
+    "height": 168,
+    "body": [
+      24,
+      24,
+      395,
+      112
+    ],
+    "radius": 29,
+    "depth": 8,
+    "kind": "raised",
+    "base": "#BACCD4",
+    "bevel": 3
+  },
+  "secondary": {
+    "file": "secondary.png",
+    "width": 443,
+    "height": 167,
+    "body": [
+      24,
+      24,
+      395,
+      112
+    ],
+    "radius": 29,
+    "depth": 7,
+    "kind": "gloss",
+    "base": "#E5F1F5",
+    "bevel": 4
+  },
+  "mode-card": {
+    "file": "mode-card.png",
+    "width": 852,
+    "height": 299,
+    "body": [
+      25,
+      25,
+      802,
+      245
+    ],
+    "radius": 36,
+    "depth": 4,
+    "kind": "raised",
+    "base": "#EFF8FC",
+    "bevel": 3
+  },
+  "level-card": {
+    "file": "level-card.png",
+    "width": 845,
+    "height": 174,
+    "body": [
+      20,
+      20,
+      805,
+      130
+    ],
+    "radius": 28,
+    "depth": 4,
+    "kind": "raised",
+    "base": "#EFF8FC",
+    "bevel": 3
+  },
+  "stat": {
+    "file": "stat.png",
+    "width": 279,
+    "height": 146,
+    "body": [
+      8,
+      8,
+      263,
+      130
+    ],
+    "radius": 24,
+    "depth": 0,
+    "kind": "raised",
+    "base": "#18566E",
+    "bevel": 2
+  },
+  "stat-dark": {
+    "file": "stat-dark.png",
+    "width": 276,
+    "height": 146,
+    "body": [
+      8,
+      8,
+      260,
+      130
+    ],
+    "radius": 24,
+    "depth": 0,
+    "kind": "raised",
+    "base": "#213E50",
+    "bevel": 2
+  },
+  "dialog": {
+    "file": "dialog.png",
+    "width": 870,
+    "height": 562,
+    "body": [
+      40,
+      40,
+      790,
+      470
+    ],
+    "radius": 44,
+    "depth": 12,
+    "kind": "raised",
+    "base": "#EAF5F9",
+    "bevel": 5
+  },
+  "mode-icon-0": {
+    "file": "mode-icon-0.png",
+    "width": 300,
+    "height": 300,
+    "body": [
+      0,
+      0,
+      300,
+      300
+    ],
+    "kind": "static-emblem",
+    "font": "Noto Sans SC; SIL OFL 1.1"
+  },
+  "mode-icon-1": {
+    "file": "mode-icon-1.png",
+    "width": 300,
+    "height": 300,
+    "body": [
+      0,
+      0,
+      300,
+      300
+    ],
+    "kind": "static-emblem",
+    "font": "Noto Sans SC; SIL OFL 1.1"
+  },
+  "mode-icon-2": {
+    "file": "mode-icon-2.png",
+    "width": 300,
+    "height": 300,
+    "body": [
+      0,
+      0,
+      300,
+      300
+    ],
+    "kind": "static-emblem",
+    "font": "Noto Sans SC; SIL OFL 1.1"
+  },
+  "mode-icon-3": {
+    "file": "mode-icon-3.png",
+    "width": 300,
+    "height": 300,
+    "body": [
+      0,
+      0,
+      300,
+      300
+    ],
+    "kind": "static-emblem",
+    "font": "Noto Sans SC; SIL OFL 1.1"
+  },
+  "mode-icon-4": {
+    "file": "mode-icon-4.png",
+    "width": 300,
+    "height": 300,
+    "body": [
+      0,
+      0,
+      300,
+      300
+    ],
+    "kind": "static-emblem",
+    "font": "Noto Sans SC; SIL OFL 1.1"
+  }
+}

@@ -61,13 +61,12 @@ public class Element extends androidx.appcompat.widget.AppCompatButton {
         super(c);
         context = c;
         setAllCaps(false);
-        setBackgroundResource(R.drawable.game_brick);
-        setColor(GetColorRes(context, R.attr.buttonEmpty));
+        androidx.core.view.ViewCompat.setBackgroundTintList(this,null);
+        setBackground(org.secuso.privacyfriendly2048.ceramic.CeramicAssets.skin(c,"hole-light"));
+        setStateListAnimator(null);setMinimumWidth(0);setMinimumHeight(0);setMinWidth(0);setMinHeight(0);
+        setPadding(0,0,0,0);setIncludeFontPadding(false);setGravity(android.view.Gravity.CENTER);
+        setTypeface(org.secuso.privacyfriendly2048.ceramic.CeramicAssets.font(c,800));
         setMaxLines(1);
-        setAutoSizeTextTypeUniformWithConfiguration(1,
-                100,
-                1,
-                TypedValue.COMPLEX_UNIT_SP);
     }
 
     public void drawItem() {
@@ -82,73 +81,14 @@ public class Element extends androidx.appcompat.widget.AppCompatButton {
                 setVisibility(View.VISIBLE);
         }
 
-        switch (number) {
-            case 0:
-                setColor(GetColorRes(context, R.attr.buttonEmpty));
-                setTextColor(GetColorInt(context, R.attr.buttonEmptyText));
-                break;
-            case 2:
-                setColor(GetColorRes(context, R.attr.button2));
-                setTextColor(GetColorInt(context, R.attr.button2Text));
-                break;
-            case 4:
-                setColor(GetColorRes(context, R.attr.button4));
-                setTextColor(GetColorInt(context, R.attr.button4Text));
-                break;
-            case 8:
-                setColor(GetColorRes(context, R.attr.button8));
-                setTextColor(GetColorInt(context, R.attr.button8Text));
-                break;
-            case 16:
-                setColor(GetColorRes(context, R.attr.button16));
-                setTextColor(GetColorInt(context, R.attr.button16Text));
-                break;
-            case 32:
-                setColor(GetColorRes(context, R.attr.button32));
-                setTextColor(GetColorInt(context, R.attr.button32Text));
-                break;
-            case 64:
-                setColor(GetColorRes(context, R.attr.button64));
-                setTextColor(GetColorInt(context, R.attr.button64Text));
-                break;
-            case 128:
-                setColor(GetColorRes(context, R.attr.button128));
-                setTextColor(GetColorInt(context, R.attr.button128Text));
-                break;
-            case 256:
-                setColor(GetColorRes(context, R.attr.button256));
-                setTextColor(GetColorInt(context, R.attr.button256Text));
-                break;
-            case 512:
-                setColor(GetColorRes(context, R.attr.button512));
-                setTextColor(GetColorInt(context, R.attr.button512Text));
-                break;
-            case 1024:
-                setColor(GetColorRes(context, R.attr.button1024));
-                setTextColor(GetColorInt(context, R.attr.button1024Text));
-                break;
-            case 2048:
-                setColor(GetColorRes(context, R.attr.button2048));
-                setTextColor(GetColorInt(context, R.attr.button2048Text));
-                break;
-            case 4096:
-                setColor(GetColorRes(context, R.attr.button4096));
-                setTextColor(GetColorInt(context, R.attr.button4096Text));
-                break;
-            case 8192:
-                setColor(GetColorRes(context, R.attr.button8192));
-                setTextColor(GetColorInt(context, R.attr.button8192Text));
-                break;
-            case 16384:
-                setColor(GetColorRes(context, R.attr.button16384));
-                setTextColor(GetColorInt(context, R.attr.button16384Text));
-                break;
-            case 32768:
-                setColor(GetColorRes(context, R.attr.button32768));
-                setTextColor(GetColorInt(context, R.attr.button32768Text));
-                break;
-        }
+        boolean warm="2".equals(android.preference.PreferenceManager.getDefaultSharedPreferences(context).getString("pref_color","1"));
+        setBackground(org.secuso.privacyfriendly2048.ceramic.CeramicAssets.skin(context,org.secuso.privacyfriendly2048.ceramic.CeramicAssets.tile(number,warm)));
+        setTextColor(org.secuso.privacyfriendly2048.ceramic.CeramicAssets.tileText(number,warm));
     }
+    @Override protected void onSizeChanged(int w,int h,int oldw,int oldh){super.onSizeChanged(w,h,oldw,oldh);fitText(w);}
+    @Override protected void onDraw(android.graphics.Canvas canvas){org.secuso.privacyfriendly2048.ceramic.CeramicAssets.drawNumber(canvas,this);}
+    private void fitText(int w){int digits=Integer.toString(Math.max(1,number)).length();setTextSize(TypedValue.COMPLEX_UNIT_PX,w*(36f/81.25f)*(digits>=4?3.2f/digits:1));}
+    @Override protected void onTextChanged(CharSequence text,int start,int before,int count){super.onTextChanged(text,start,before,count);if(getWidth()>0)fitText(getWidth());}
 
     private void setColor(int c) {
         color = c;

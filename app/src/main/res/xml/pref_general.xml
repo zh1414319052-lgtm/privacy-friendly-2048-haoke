@@ -2,12 +2,14 @@
 
     <ListPreference
         android:key="currentTheme"
-        android:title="Select theme"
+        android:title="@string/settings_theme"
         android:entries="@array/theme_list"
         android:entryValues="@array/theme_list_values"
         android:defaultValue="system"
         android:summary="%s"
         />
+
+    <SwitchPreference android:key="ceramic_sound" android:defaultValue="true" android:title="@string/ceramic_sound" android:summary="@string/ceramic_sound_summary" />
 
     <SwitchPreference
         android:defaultValue="true"

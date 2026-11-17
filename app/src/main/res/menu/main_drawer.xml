@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/action_main" />
         <item
+            android:id="@+id/nav_challenge_modes"
+            android:icon="@drawable/ic_menu_stat"
+            android:title="@string/action_modes" />
+        <item
             android:id="@+id/nav_tutorial"
             android:icon="@drawable/ic_menu_tutorial"
             android:title="@string/action_tutorial" />

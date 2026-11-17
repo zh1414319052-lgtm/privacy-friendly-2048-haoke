@@ -25,9 +25,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.AtomicFile;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -42,7 +42,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.secuso.privacyfriendly2048.R;
+import org.secuso.privacyfriendly2048.ceramic.*;
+import android.widget.FrameLayout;
 import org.secuso.privacyfriendly2048.activities.helper.BaseActivityWithoutNavBar;
+import org.secuso.privacyfriendly2048.activities.helper.GameConfirmation;
 import org.secuso.privacyfriendly2048.activities.helper.GameState;
 import org.secuso.privacyfriendly2048.activities.helper.GameStatistics;
 import org.secuso.privacyfriendly2048.activities.helper.Gestures;
@@ -73,50 +76,56 @@ import java.util.Calendar;
 
 @SuppressWarnings("StringConcatenationInLoop")
 public class GameActivity extends BaseActivityWithoutNavBar {
-    public static int n = 4;
+    private int n = 4;
     public TextView textFieldPoints;
     public TextView textFieldRecord;
     public int numberFieldSize = 0;
-    static Element[][] elements = null;
-    static Element[][] last_elements = null;
-    static Element[][] backgroundElements;
-    static GameState gameState = null;
+    private Element[][] elements = null;
+    private Element[][] last_elements = null;
+    private Element[][] backgroundElements;
+    private GameState gameState = null;
 
     RelativeLayout number_field;
     RelativeLayout number_field_background;
     RelativeLayout touch_field;
-    ImageButton restartButton;
-    ImageButton undoButton;
-    public static int points = 0;
-    public static int last_points = 0;
-    public static long record = 0;
+    View restartButton;
+    View undoButton;
+    private CeramicScene scene;
+    private CeramicAudio audio;
+    private int points = 0;
+    private int last_points = 0;
+    private long record = 0;
 
     public static long ADDINGSPEED = 100;
     public static long MOVINGSPEED = 80;
     public static long SCALINGSPEED = 100;
     public static float SCALINGFACTOR = 1.1f;
 
-    public static boolean moved = false;
-    public static boolean firstTime = true;
-    public static boolean newGame;
+    private boolean moved = false;
+    private boolean newGame;
     public boolean won2048 = false;
-    public static boolean gameOver = false;
-    public static boolean createNewGame = true;
-    public static boolean undo = false;
-    public static boolean animationActivated = true;
-    public static boolean saveState = true;
+    private boolean gameOver = false;
+    private boolean undo = false;
+    private boolean animationActivated = true;
+    private boolean saveState = true;
 
     public final int WINTHRESHOLD = 2048;
     public final double PROPABILITYFORTWO = 0.9;
     View.OnTouchListener swipeListener;
 
 
-    static String filename;
+    private String filename;
+    private boolean boardReady;
+    private androidx.appcompat.app.AlertDialog restartConfirmation;
+
+    static String saveFileName(int size) {
+        return "state" + size + ".txt";
+    }
 
     SharedPreferences sharedPref;
 
     GameStatistics gameStatistics = new GameStatistics(n);
-    public static long startingTime;
+    private long startingTime;
     public int highestNumber;
 
     private Activity myActivity;
@@ -125,49 +134,70 @@ public class GameActivity extends BaseActivityWithoutNavBar {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.action_settings);
-        item.setVisible(false);
+        if(item!=null)item.setVisible(false);
         super.onPrepareOptionsMenu(menu);
         return true;
     }
 
     @Override
-    public void onPause() {
-        Log.i("lifecycle", "pause");
-        save();
-
-        super.onPause();
-
+    public void onResume() {
+        super.onResume();
+        startingTime = System.currentTimeMillis();
+        if(audio!=null)audio.resume();
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onPause() {
+        if (boardReady) save();
+        if(audio!=null)audio.pause();
+        super.onPause();
+    }
 
+    @Override
+    protected void onCreate(Bundle state) {
+        super.onCreate(state);
         myActivity = this;
-        saveState = true;
-
-        if (savedInstanceState == null) {
-            Intent intent = getIntent();
-            if (firstTime && intent.getBooleanExtra("new", true)) {
-                createNewGame = true;
-                firstTime = false;
-            }
-        }
+        int requestedSize = getIntent().getIntExtra("n", 4);
+        n = requestedSize >= 4 && requestedSize <= 7 ? requestedSize : 4;
+        filename = saveFileName(n);
+        boolean fromHome = getPackageName().equals(getCallingPackage());
+        boolean hasSave = new File(getFilesDir(), filename).isFile();
+        boolean startNew = !hasSave || (state == null && fromHome && getIntent().getBooleanExtra("new", false));
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         animationActivated = sharedPref.getBoolean("pref_animationActivated", true);
-
-        if (sharedPref.getBoolean("settings_display", true))
+        if (sharedPref.getBoolean("switch_preference_1", true)) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setContentView(R.layout.activity_game);
-
+        }
+        audio=new CeramicAudio(this);
+        installCeramic();
         initResources();
-
-
+        number_field.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom,
+                                       int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                if (right <= left || bottom <= top) return;
+                v.removeOnLayoutChangeListener(this);
+                // Adding tiles inside RelativeLayout's layout callback can leave their
+                // bodies at 0x0 until a later layout. Populate after this traversal so
+                // both layers receive a normal measure/layout pass before interaction.
+                v.post(() -> {
+                    if (isFinishing() || isDestroyed()) return;
+                    sizeBoard();
+                    initializeState(startNew);
+                    initialize();
+                    setListener();
+                    boardReady = true;
+                    if (startNew) saveStateToFile(gameState);
+                });
+            }
+        });
     }
+
     private void handleUndo() {
-        undoButton.setVisibility(View.INVISIBLE);
+        undoButton.setEnabled(false);
         if (undo && last_elements != null) {
+            audio.play(CeramicAudio.Cue.UNDO);
             gameStatistics.undo();
             elements = last_elements;
             points = last_points;
@@ -189,27 +219,48 @@ public class GameActivity extends BaseActivityWithoutNavBar {
                     backgroundElements[i][j].setOnTouchListener(swipeListener);
                 }
             }
+            undo = false;
             updateGameState();
             drawAllElements(elements);
             number_field.refreshDrawableState();
         }
         undo = false;
+        refreshUndo();
     }
+    private void installCeramic(){
+        scene=new CeramicScene(this,"game");
+        scene.text("game-subtitle",n+" × "+n+" · "+CeramicAssets.words(this,"目标 2048","Reach 2048"));
+        scene.action("game-back",View.NO_ID,getString(R.string.cancel),this::finish);
+        scene.action("game-menu",View.NO_ID,CeramicAssets.words(this,"更多","More"),()->CeramicNavigation.menu(this,scene.node("game-menu")));
+        FrameLayout host=new FrameLayout(this);host.setClipChildren(false);host.setClipToPadding(false);host.setBackground(CeramicAssets.skin(this,"tray-light"));
+        number_field_background=new RelativeLayout(this);number_field_background.setId(R.id.number_field_background);
+        number_field=new RelativeLayout(this);number_field.setId(R.id.number_field);
+        touch_field=new RelativeLayout(this);touch_field.setId(R.id.touch_field);
+        for(RelativeLayout layer:new RelativeLayout[]{number_field_background,number_field,touch_field}){
+            layer.setClipChildren(false);layer.setClipToPadding(false);host.addView(layer,new FrameLayout.LayoutParams(-1,-1));
+        }
+        scene.replace("game-board",host);scene.move("game-board",24,298,384,384);
+        scene.node("game-score-value").setId(R.id.points);scene.node("game-best-value").setId(R.id.record);
+        scene.action("undo",R.id.undoButton,getString(R.string.undo),()->{});
+        scene.action("restart",R.id.restartButton,getString(R.string.restart_game),()->{});
+        scene.landscapeGame();CeramicScene.install(this,scene);
+    }
+    private void refreshUndo(){undoButton.setVisibility(View.VISIBLE);undoButton.setEnabled(undo);undoButton.setAlpha(undo?1f:.48f);}
     public void initResources() {
         number_field = (RelativeLayout) findViewById(R.id.number_field);
         number_field_background = (RelativeLayout) findViewById(R.id.number_field_background);
         touch_field = (RelativeLayout) findViewById(R.id.touch_field);
         textFieldPoints = (TextView) findViewById(R.id.points);
         textFieldRecord = (TextView) findViewById(R.id.record);
-        restartButton = (ImageButton) findViewById(R.id.restartButton);
-        restartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveStatisticsToFile(gameStatistics);
-                createNewGame();
-            }
+        restartButton = findViewById(R.id.restartButton);
+        restartButton.setOnClickListener(v -> {
+            if (!boardReady || (restartConfirmation != null && restartConfirmation.isShowing())) return;
+            audio.play(CeramicAudio.Cue.SELECT);
+            restartConfirmation = GameConfirmation.show(this, R.string.confirm_restart_title,
+                    getString(R.string.confirm_restart_message), R.string.restart_game,
+                    this::createNewGame);
         });
-        undoButton = (ImageButton) findViewById(R.id.undoButton);
+        undoButton = findViewById(R.id.undoButton);
 
         undoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -222,84 +273,53 @@ public class GameActivity extends BaseActivityWithoutNavBar {
         startingTime = Calendar.getInstance().getTimeInMillis();
     }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        // TODO Auto-generated method stub
-        createNewGame = false;
-        super.onConfigurationChanged(newConfig);
-    }
-
-    public void save() {
-        Log.i("saving", "save");
-        if (!createNewGame)
-            saveStateToFile(gameState);
-        gameStatistics.addTimePlayed(Calendar.getInstance().getTimeInMillis() - startingTime);
-        startingTime = Calendar.getInstance().getTimeInMillis();
+    private void save() {
+        saveStateToFile(gameState);
+        gameStatistics.addTimePlayed(Math.max(0L, System.currentTimeMillis() - startingTime));
         saveStatisticsToFile(gameStatistics);
-        firstTime = true;
     }
 
     @Override
-    public void onBackPressed() {
-        save();
-
-        super.onBackPressed();
-
+    protected void onDestroy() {
+        if (restartConfirmation != null) restartConfirmation.dismiss();
+        if(audio!=null)audio.release();
+        super.onDestroy();
     }
 
-    public void createNewGame() {
-        createNewGame = true;
-        getIntent().putExtra("new", true);
-        number_field.removeAllViews();
-        number_field_background.removeAllViews();
+    private void createNewGame() {
+        audio.play(CeramicAudio.Cue.SELECT);
+        saveStatisticsToFile(gameStatistics);
+        initializeState(true);
         initialize();
-
+        saveStateToFile(gameState);
     }
 
-    protected void start() {
-        Log.i("activity", "start");
-        saveState = true;
+    private void sizeBoard() {
         android.view.ViewGroup.LayoutParams lp = number_field.getLayoutParams();
-
-        //setting squared Number Field
         if (number_field.getHeight() > number_field.getWidth())
             lp.height = number_field.getWidth();
         else
             lp.width = number_field.getHeight();
         number_field.setLayoutParams(lp);
         number_field_background.setLayoutParams(lp);
-
-        initialize();
-        setListener();
-        if (newGame) {
-            moved = true;
-            addNumber();
-        }
-        newGame = false;
-
     }
 
-    public void initializeState() {
-        points = 0;
-        Intent intent = getIntent();
-        n = intent.getIntExtra("n", 4);
-        newGame = intent.getBooleanExtra("new", true);
-        filename = intent.getStringExtra("filename");
-        undo = intent.getBooleanExtra("undo", false);
-        if (!newGame) {
-            gameState = readStateFromFile();
-            points = gameState.points;
-            last_points = gameState.last_points;
-        } else {
+    private void initializeState(boolean startNew) {
+        gameOver = false;
+        won2048 = false;
+        gameState = startNew ? null : readStateFromFile();
+        newGame = gameState == null;
+        if (newGame) {
             gameState = new GameState(n);
-            newGame = true;
+            gameState.n = n;
         }
+        points = gameState.points;
+        last_points = gameState.last_points;
+        undo = gameState.undo;
         elements = new Element[n][n];
         last_elements = new Element[n][n];
         backgroundElements = new Element[n][n];
         saveState = true;
-
-
     }
 
     public void drawAllElements(Element[][] e) {
@@ -318,33 +338,30 @@ public class GameActivity extends BaseActivityWithoutNavBar {
         gameState.undo = undo;
         updateHighestNumber();
         check2048();
+        refreshUndo();
 
     }
 
     public void initialize() {
         Log.i("activity", "initialize");
-        if (getIntent().getIntExtra("n", 4) != n || createNewGame) {
-            initializeState();
-
-        }
         gameStatistics = readStatisticsFromFile();
         record = gameStatistics.getRecord();
-        last_points = gameState.last_points;
-        createNewGame = false;
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        int abstand = (10 * metrics.densityDpi) / DisplayMetrics.DENSITY_DEFAULT;
+
         numberFieldSize = number_field.getWidth();
         if (numberFieldSize > number_field.getHeight())
             numberFieldSize = number_field.getHeight();
-        int number_size = (numberFieldSize - abstand) / n - abstand;
+        int abstand=Math.round(numberFieldSize*9f/384), inset=Math.round(numberFieldSize*16f/384);
+        int number_size=(numberFieldSize-2*inset-(n-1)*abstand)/n;
 
         textFieldRecord.setText("" + record);
         textFieldPoints.setText("" + points);
         if (undo)
             undoButton.setVisibility(View.VISIBLE);
         else
-            undoButton.setVisibility(View.INVISIBLE);
+            undoButton.setEnabled(false);
+        refreshUndo();
 
         number_field_background.removeAllViews();
         number_field.removeAllViews();
@@ -361,8 +378,8 @@ public class GameActivity extends BaseActivityWithoutNavBar {
                 if (elements[i][j].getNumber() >= WINTHRESHOLD)
                     won2048 = true;
                 RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(number_size, number_size);
-                lp.setMarginStart(abstand + j * (number_size + abstand));
-                lp.topMargin = abstand + i * (number_size + abstand);
+                lp.setMarginStart(inset + j * (number_size + abstand));
+                lp.topMargin = inset + i * (number_size + abstand);
                 elements[i][j].setDPosition(lp.getMarginStart(), lp.topMargin);
                 elements[i][j].setLayoutParams(lp);
                 backgroundElements[i][j].setLayoutParams(lp);
@@ -739,6 +756,7 @@ public class GameActivity extends BaseActivityWithoutNavBar {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (!boardReady) return super.onKeyDown(keyCode, event);
         switch (keyCode) {
             case KeyEvent.KEYCODE_DPAD_UP:
                 handleSwipeTop();
@@ -784,6 +802,9 @@ public class GameActivity extends BaseActivityWithoutNavBar {
                 return false;
             }
         };
+        View.OnTouchListener delegate=swipeListener;
+        swipeListener=(v,e)->{v.getParent().requestDisallowInterceptTouchEvent(e.getActionMasked()!=android.view.MotionEvent.ACTION_UP&&e.getActionMasked()!=android.view.MotionEvent.ACTION_CANCEL);return delegate.onTouch(v,e);};
+        touch_field.setClickable(true);
         touch_field.setOnTouchListener(swipeListener);
         number_field.setOnTouchListener(swipeListener);
         for (int i = 0; i < elements.length; i++) {
@@ -1030,6 +1051,10 @@ public class GameActivity extends BaseActivityWithoutNavBar {
                     }
                 }
             }
+            if(boardReady&&!newGame){
+                int largest=0;for(Element[] row:elements)for(Element tile:row)largest=Math.max(largest,tile.number);
+                audio.play(gameOver?CeramicAudio.Cue.END:(!won2048&&largest>=WINTHRESHOLD)?CeramicAudio.Cue.CLEAR:points>last_points?CeramicAudio.Cue.MERGE:CeramicAudio.Cue.SLIDE);
+            }
             updateGameState();
 
             if (gameOver) {
@@ -1048,12 +1073,9 @@ public class GameActivity extends BaseActivityWithoutNavBar {
                 .setNegativeButton((this.getResources().getString(R.string.No_Message)), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        createNewGame = true;
-                        getIntent().putExtra("new", true);
-                        initialize();
-                        deleteStateFile();
                         saveState = false;
-                        GameActivity.this.onBackPressed();
+                        deleteStateFile();
+                        finish();
 
                     }
                 })
@@ -1087,84 +1109,50 @@ public class GameActivity extends BaseActivityWithoutNavBar {
         if (id == R.id.action_settings) {
             return true;
         } else if (id == android.R.id.home) {
-            save();
+            finish();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        // TODO Auto-generated method stub
-        super.onWindowFocusChanged(hasFocus);
-        start();
-
-
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-
-        save();
-
-    }
-
-    public void saveStateToFile(GameState nS) {
-        if (saveState) {
-            try {
-                if (filename == null)
-                    filename = "state" + n + ".txt";
-                File file = new File(getFilesDir(), filename);
-                FileOutputStream fileOut = new FileOutputStream(file);
-                ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                out.writeObject(nS);
-                out.close();
-                fileOut.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public boolean deleteStateFile() {
+    private void saveStateToFile(GameState state) {
+        if (!saveState || state == null) return;
+        AtomicFile file = new AtomicFile(new File(getFilesDir(), filename));
+        FileOutputStream raw = null;
         try {
-            if (filename == null)
-                filename = "state" + n + ".txt";
-            File directory = getFilesDir();
-            File f = new File(directory, filename);
-            return f.delete();
-        } catch (Exception e) {
-            e.printStackTrace();
+            raw = file.startWrite();
+            ObjectOutputStream out = new ObjectOutputStream(raw);
+            out.writeObject(state);
+            out.flush();
+            file.finishWrite(raw);
+        } catch (IOException e) {
+            file.failWrite(raw);
+            Log.e("GameActivity", "Could not save game", e);
         }
-        return false;
     }
 
-    public GameState readStateFromFile() {
-        GameState nS = new GameState(n);
-        try {
-            File file = new File(getFilesDir(), filename);
-            FileInputStream fileIn = new FileInputStream(file);
-            ObjectInputStream in = new ObjectInputStream(fileIn);
-            nS = (GameState) in.readObject();
-            boolean emptyField = true;
-            for (int i = 0; i < nS.numbers.length; i++) {
-                if (nS.numbers[i] > 0) {
-                    emptyField = false;
-                    break;
-                }
+    private void deleteStateFile() {
+        new AtomicFile(new File(getFilesDir(), filename)).delete();
+    }
+
+    private GameState readStateFromFile() {
+        AtomicFile file = new AtomicFile(new File(getFilesDir(), filename));
+        try (ObjectInputStream in = new ObjectInputStream(file.openRead())) {
+            Object value = in.readObject();
+            if (!(value instanceof GameState)) return null;
+            GameState state = (GameState) value;
+            if (state.n != n || state.numbers == null || state.numbers.length != n * n) return null;
+            if (state.undo && (state.last_numbers == null || state.last_numbers.length != n * n)) {
+                state.undo = false;
             }
-            if (emptyField || nS.n != n) {
-                nS = new GameState(n);
-                newGame = true;
+            for (int tile : state.numbers) {
+                if (tile > 0) return state;
             }
-            in.close();
-            fileIn.close();
-        } catch (Exception e) {
-            newGame = true;
-            e.printStackTrace();
+        } catch (IOException | ClassNotFoundException e) {
+            Log.w("GameActivity", "Could not read saved game", e);
         }
-        return nS;
+        return null;
     }
 
     public GameStatistics readStatisticsFromFile() {

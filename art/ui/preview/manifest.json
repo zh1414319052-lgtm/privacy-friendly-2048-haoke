@@ -1,0 +1,1760 @@
+{
+  "project": "privacy-friendly-2048-ceramic",
+  "revision": 4,
+  "source_sha256": "093ffb7080e65041691a112015d49f950df304977cdd208d89b8279b347ea1f3",
+  "scale": 1.0,
+  "files": [
+    {
+      "board": "home",
+      "format": "png",
+      "file": "home.png",
+      "bytes": 183979,
+      "sha256": "a2a9dc20170353a0b82ec3548e59202795619420718a7eb7bc0f832367ccfb04",
+      "render": {
+        "path": "art/ui/preview/home.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "home",
+      "format": "svg",
+      "file": "home.svg",
+      "bytes": 439213,
+      "sha256": "d4df02266b0d96a031adf79b095caba8e3e3cdf37716a4764e8675148f5741cf",
+      "render": {
+        "path": "art/ui/preview/home.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "modes",
+      "format": "png",
+      "file": "modes.png",
+      "bytes": 249969,
+      "sha256": "8a709daf22e62b22e6cf444163f128662ee43962dea71845ef78c3b106cd8563",
+      "render": {
+        "path": "art/ui/preview/modes.png",
+        "format": "png",
+        "width": 853,
+        "height": 1844,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "modes",
+      "format": "svg",
+      "file": "modes.svg",
+      "bytes": 517869,
+      "sha256": "9aca430281c20fcc2c46f605764c5ba0b583112ab0d2368fcc1151428af620d8",
+      "render": {
+        "path": "art/ui/preview/modes.svg",
+        "format": "svg",
+        "width": 853,
+        "height": 1844,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "puzzle",
+      "format": "png",
+      "file": "puzzle.png",
+      "bytes": 177511,
+      "sha256": "c3419ed9c282fe65403363c100d02d9d52d6877323f77a0e3dc354a092c48cbf",
+      "render": {
+        "path": "art/ui/preview/puzzle.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "puzzle",
+      "format": "svg",
+      "file": "puzzle.svg",
+      "bytes": 465309,
+      "sha256": "ad03602e929294a80539833dde30fcfea8ff8dc851c90bacd4ed4f1e639204d4",
+      "render": {
+        "path": "art/ui/preview/puzzle.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "levels",
+      "format": "png",
+      "file": "levels.png",
+      "bytes": 194803,
+      "sha256": "7f3ffc5e490e2ab4b0010bdfeee191803a8f20b1a14c7a7a84080a8050cd39e9",
+      "render": {
+        "path": "art/ui/preview/levels.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "levels",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "levels",
+      "format": "svg",
+      "file": "levels.svg",
+      "bytes": 529346,
+      "sha256": "42eeef9de53d6bbed7cb1a050c76b478bac691bb6f8337e6ff94f0d3a98cba10",
+      "render": {
+        "path": "art/ui/preview/levels.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "levels",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "classic",
+      "format": "png",
+      "file": "classic.png",
+      "bytes": 153976,
+      "sha256": "83828b59e6222c61741f618b0024decfa044eda49529bac79bcc07db974a9de2",
+      "render": {
+        "path": "art/ui/preview/classic.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "classic",
+      "format": "svg",
+      "file": "classic.svg",
+      "bytes": 374769,
+      "sha256": "5172f8595fd9a106f034e9176a4b8adf89c5adbe35dc85892a5a83dcac0b9b69",
+      "render": {
+        "path": "art/ui/preview/classic.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "solved",
+      "format": "png",
+      "file": "solved.png",
+      "bytes": 173848,
+      "sha256": "4d4d4fbf14726554c482724fe4c7d43f44fdd78984dd312646e7f7786b227589",
+      "render": {
+        "path": "art/ui/preview/solved.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "solved",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "solved",
+      "format": "svg",
+      "file": "solved.svg",
+      "bytes": 484514,
+      "sha256": "179974d55e73836bc9fd0752080e184fc2855955efc425af772b72714c6a3a39",
+      "render": {
+        "path": "art/ui/preview/solved.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "solved",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart",
+      "format": "png",
+      "file": "restart.png",
+      "bytes": 184024,
+      "sha256": "afbca50495216ea9d305d5e3eb7b6c781909d3460038016a6c372fa90eb57474",
+      "render": {
+        "path": "art/ui/preview/restart.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart",
+      "format": "svg",
+      "file": "restart.svg",
+      "bytes": 604046,
+      "sha256": "afb8e4a94f02295af206d90cd4ded9ddc0c3881ed0eecdbd88882dfcab859e04",
+      "render": {
+        "path": "art/ui/preview/restart.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "dark",
+      "format": "png",
+      "file": "dark.png",
+      "bytes": 159785,
+      "sha256": "ddc5f02cf551a9bea70ba320acf822463d7202ded5e0f4f8a30d3e770b43b902",
+      "render": {
+        "path": "art/ui/preview/dark.png",
+        "format": "png",
+        "width": 1750,
+        "height": 899,
+        "scale": 1.0,
+        "board": "dark",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "dark",
+      "format": "svg",
+      "file": "dark.svg",
+      "bytes": 449090,
+      "sha256": "59d2cc66b3fc8942b972e9a1fdc2285079a2c566b1538941f8637765cea9bc1e",
+      "render": {
+        "path": "art/ui/preview/dark.svg",
+        "format": "svg",
+        "width": 1750,
+        "height": 899,
+        "scale": 1.0,
+        "board": "dark",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "sprint",
+      "format": "png",
+      "file": "sprint.png",
+      "bytes": 178677,
+      "sha256": "dcfb9081a8ad2eba41676469cf20972df02a5a4bb99ea45d4c7201808462f71f",
+      "render": {
+        "path": "art/ui/preview/sprint.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "sprint",
+      "format": "svg",
+      "file": "sprint.svg",
+      "bytes": 373929,
+      "sha256": "0ba2b172df1261afe0be4e83b5d3a7edfca5ad66f00c7c66acd7a8658c8d4157",
+      "render": {
+        "path": "art/ui/preview/sprint.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "obstacles",
+      "format": "png",
+      "file": "obstacles.png",
+      "bytes": 196163,
+      "sha256": "730dc50da5e74a8079cdda381ec2a294e1e25b6c871ae2a48ebb4bc2dc1370c7",
+      "render": {
+        "path": "art/ui/preview/obstacles.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "obstacles",
+      "format": "svg",
+      "file": "obstacles.svg",
+      "bytes": 479485,
+      "sha256": "baea7fc491e7e72825f5e68150699ee176f15ba5eff4dcf29c4e7875fb15a054",
+      "render": {
+        "path": "art/ui/preview/obstacles.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "fibonacci",
+      "format": "png",
+      "file": "fibonacci.png",
+      "bytes": 186814,
+      "sha256": "1bd44f84f8726994f359f7a85700da72328ee808fc3ee16e03a1cfbade97d68e",
+      "render": {
+        "path": "art/ui/preview/fibonacci.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "fibonacci",
+      "format": "svg",
+      "file": "fibonacci.svg",
+      "bytes": 469025,
+      "sha256": "940b932b6946d1bf6cce71b1d6d73ccee20e2654a0f5f44316bca9bc7408f6eb",
+      "render": {
+        "path": "art/ui/preview/fibonacci.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "daily",
+      "format": "png",
+      "file": "daily.png",
+      "bytes": 223103,
+      "sha256": "c383e11fb144ce2f50e2bc86d1e5869ab82a8034accc7ec8a98c2ad0c72582ea",
+      "render": {
+        "path": "art/ui/preview/daily.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "daily",
+      "format": "svg",
+      "file": "daily.svg",
+      "bytes": 702029,
+      "sha256": "ee5e382bb085b8c1579504bf44ebd50fdf9ea3dea66baa119e3fe467195ba166",
+      "render": {
+        "path": "art/ui/preview/daily.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "puzzle-2",
+      "format": "png",
+      "file": "puzzle-2.png",
+      "bytes": 181523,
+      "sha256": "27f988ccfeccd0d8ca94f252679b62876c99530db8dde4f79b9ba1f460ad2708",
+      "render": {
+        "path": "art/ui/preview/puzzle-2.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "puzzle-2",
+      "format": "svg",
+      "file": "puzzle-2.svg",
+      "bytes": 387511,
+      "sha256": "c45d1683a09a1d508872c6663659371d2c565a396d95da0afe2aca1d9420a6b4",
+      "render": {
+        "path": "art/ui/preview/puzzle-2.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart-classic",
+      "format": "png",
+      "file": "restart-classic.png",
+      "bytes": 173528,
+      "sha256": "5adfe89a44cd432dd1c7246ef8bcff0b0ad2d30b991cb85a24f711440fc347d6",
+      "render": {
+        "path": "art/ui/preview/restart-classic.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "restart-classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart-classic",
+      "format": "svg",
+      "file": "restart-classic.svg",
+      "bytes": 513532,
+      "sha256": "8d8f21d7d87b216ceabc24ecb707cd6107a2de62425c28500ef8fbc1982c458b",
+      "render": {
+        "path": "art/ui/preview/restart-classic.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "restart-classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart-sprint",
+      "format": "png",
+      "file": "restart-sprint.png",
+      "bytes": 190594,
+      "sha256": "e5b8a627b61b6577d9fa5462b963d9cfb2b8365d8010051e5a5a907afb620ddd",
+      "render": {
+        "path": "art/ui/preview/restart-sprint.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart-sprint",
+      "format": "svg",
+      "file": "restart-sprint.svg",
+      "bytes": 512692,
+      "sha256": "50ea8cf789aa94f92b96f6ea7d5bf97e1b61a24493a904a65fb912c574e1ae91",
+      "render": {
+        "path": "art/ui/preview/restart-sprint.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart-obstacles",
+      "format": "png",
+      "file": "restart-obstacles.png",
+      "bytes": 193428,
+      "sha256": "7f77479a4745ea91eefe571d221358541fd8f499ebf67bddd4de58482f5f43c4",
+      "render": {
+        "path": "art/ui/preview/restart-obstacles.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart-obstacles",
+      "format": "svg",
+      "file": "restart-obstacles.svg",
+      "bytes": 618248,
+      "sha256": "3aabdf594bed8d7dc5a33d8f4f3736d86239a824e6f12ab66c1cb9d736bf5916",
+      "render": {
+        "path": "art/ui/preview/restart-obstacles.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart-fibonacci",
+      "format": "png",
+      "file": "restart-fibonacci.png",
+      "bytes": 187541,
+      "sha256": "1da63ca8fddbffb66065ba3bbddd119acf1ddd54042a9085f92ee5ee3b36022d",
+      "render": {
+        "path": "art/ui/preview/restart-fibonacci.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart-fibonacci",
+      "format": "svg",
+      "file": "restart-fibonacci.svg",
+      "bytes": 607788,
+      "sha256": "b241335bd90b72538eae6722d635a551efcfc1651d36b2de215805da9d008e7c",
+      "render": {
+        "path": "art/ui/preview/restart-fibonacci.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart-daily",
+      "format": "png",
+      "file": "restart-daily.png",
+      "bytes": 208977,
+      "sha256": "0179751e4f3e6b869016d625102aced16307a0d5ba71ea6b6e9f88ec84acb502",
+      "render": {
+        "path": "art/ui/preview/restart-daily.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart-daily",
+      "format": "svg",
+      "file": "restart-daily.svg",
+      "bytes": 840792,
+      "sha256": "809e9a396a0a6d248d9851ba70fa9ec0bfaeca0d14f616eeeb40c31ab5f0dfb9",
+      "render": {
+        "path": "art/ui/preview/restart-daily.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart-puzzle-2",
+      "format": "png",
+      "file": "restart-puzzle-2.png",
+      "bytes": 191446,
+      "sha256": "0529ea190155076650559111fb981ac0fb9c93aefade3f5b2e63b4f34646c03b",
+      "render": {
+        "path": "art/ui/preview/restart-puzzle-2.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart-puzzle-2",
+      "format": "svg",
+      "file": "restart-puzzle-2.svg",
+      "bytes": 526274,
+      "sha256": "de60773f1df5d3cafd2843e659c1d9e56a89a737e28566a88a8bf8931bf1b242",
+      "render": {
+        "path": "art/ui/preview/restart-puzzle-2.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "home",
+      "format": "png",
+      "file": "state-home.png",
+      "bytes": 183979,
+      "sha256": "a2a9dc20170353a0b82ec3548e59202795619420718a7eb7bc0f832367ccfb04",
+      "render": {
+        "path": "art/ui/preview/state-home.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "home",
+      "format": "svg",
+      "file": "state-home.svg",
+      "bytes": 439213,
+      "sha256": "d4df02266b0d96a031adf79b095caba8e3e3cdf37716a4764e8675148f5741cf",
+      "render": {
+        "path": "art/ui/preview/state-home.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "modes",
+      "format": "png",
+      "file": "state-modes.png",
+      "bytes": 249969,
+      "sha256": "8a709daf22e62b22e6cf444163f128662ee43962dea71845ef78c3b106cd8563",
+      "render": {
+        "path": "art/ui/preview/state-modes.png",
+        "format": "png",
+        "width": 853,
+        "height": 1844,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "modes",
+      "format": "svg",
+      "file": "state-modes.svg",
+      "bytes": 517869,
+      "sha256": "9aca430281c20fcc2c46f605764c5ba0b583112ab0d2368fcc1151428af620d8",
+      "render": {
+        "path": "art/ui/preview/state-modes.svg",
+        "format": "svg",
+        "width": 853,
+        "height": 1844,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "levels",
+      "format": "png",
+      "file": "state-levels.png",
+      "bytes": 194803,
+      "sha256": "7f3ffc5e490e2ab4b0010bdfeee191803a8f20b1a14c7a7a84080a8050cd39e9",
+      "render": {
+        "path": "art/ui/preview/state-levels.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "levels",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "levels",
+      "format": "svg",
+      "file": "state-levels.svg",
+      "bytes": 529346,
+      "sha256": "42eeef9de53d6bbed7cb1a050c76b478bac691bb6f8337e6ff94f0d3a98cba10",
+      "render": {
+        "path": "art/ui/preview/state-levels.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "levels",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "classic",
+      "format": "png",
+      "file": "state-classic.png",
+      "bytes": 153976,
+      "sha256": "83828b59e6222c61741f618b0024decfa044eda49529bac79bcc07db974a9de2",
+      "render": {
+        "path": "art/ui/preview/state-classic.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "classic",
+      "format": "svg",
+      "file": "state-classic.svg",
+      "bytes": 374769,
+      "sha256": "5172f8595fd9a106f034e9176a4b8adf89c5adbe35dc85892a5a83dcac0b9b69",
+      "render": {
+        "path": "art/ui/preview/state-classic.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "puzzle",
+      "format": "png",
+      "file": "state-puzzle.png",
+      "bytes": 177511,
+      "sha256": "c3419ed9c282fe65403363c100d02d9d52d6877323f77a0e3dc354a092c48cbf",
+      "render": {
+        "path": "art/ui/preview/state-puzzle.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "puzzle",
+      "format": "svg",
+      "file": "state-puzzle.svg",
+      "bytes": 465309,
+      "sha256": "ad03602e929294a80539833dde30fcfea8ff8dc851c90bacd4ed4f1e639204d4",
+      "render": {
+        "path": "art/ui/preview/state-puzzle.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "solved",
+      "format": "png",
+      "file": "state-solved.png",
+      "bytes": 173848,
+      "sha256": "4d4d4fbf14726554c482724fe4c7d43f44fdd78984dd312646e7f7786b227589",
+      "render": {
+        "path": "art/ui/preview/state-solved.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "solved",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "solved",
+      "format": "svg",
+      "file": "state-solved.svg",
+      "bytes": 484514,
+      "sha256": "179974d55e73836bc9fd0752080e184fc2855955efc425af772b72714c6a3a39",
+      "render": {
+        "path": "art/ui/preview/state-solved.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "solved",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart",
+      "format": "png",
+      "file": "state-restart.png",
+      "bytes": 184024,
+      "sha256": "afbca50495216ea9d305d5e3eb7b6c781909d3460038016a6c372fa90eb57474",
+      "render": {
+        "path": "art/ui/preview/state-restart.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart",
+      "format": "svg",
+      "file": "state-restart.svg",
+      "bytes": 604046,
+      "sha256": "afb8e4a94f02295af206d90cd4ded9ddc0c3881ed0eecdbd88882dfcab859e04",
+      "render": {
+        "path": "art/ui/preview/state-restart.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "dark",
+      "format": "png",
+      "file": "state-dark.png",
+      "bytes": 159785,
+      "sha256": "ddc5f02cf551a9bea70ba320acf822463d7202ded5e0f4f8a30d3e770b43b902",
+      "render": {
+        "path": "art/ui/preview/state-dark.png",
+        "format": "png",
+        "width": 1750,
+        "height": 899,
+        "scale": 1.0,
+        "board": "dark",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "dark",
+      "format": "svg",
+      "file": "state-dark.svg",
+      "bytes": 449090,
+      "sha256": "59d2cc66b3fc8942b972e9a1fdc2285079a2c566b1538941f8637765cea9bc1e",
+      "render": {
+        "path": "art/ui/preview/state-dark.svg",
+        "format": "svg",
+        "width": 1750,
+        "height": 899,
+        "scale": 1.0,
+        "board": "dark",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "sprint",
+      "format": "png",
+      "file": "state-sprint.png",
+      "bytes": 178677,
+      "sha256": "dcfb9081a8ad2eba41676469cf20972df02a5a4bb99ea45d4c7201808462f71f",
+      "render": {
+        "path": "art/ui/preview/state-sprint.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "sprint",
+      "format": "svg",
+      "file": "state-sprint.svg",
+      "bytes": 373929,
+      "sha256": "0ba2b172df1261afe0be4e83b5d3a7edfca5ad66f00c7c66acd7a8658c8d4157",
+      "render": {
+        "path": "art/ui/preview/state-sprint.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "obstacles",
+      "format": "png",
+      "file": "state-obstacles.png",
+      "bytes": 196163,
+      "sha256": "730dc50da5e74a8079cdda381ec2a294e1e25b6c871ae2a48ebb4bc2dc1370c7",
+      "render": {
+        "path": "art/ui/preview/state-obstacles.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "obstacles",
+      "format": "svg",
+      "file": "state-obstacles.svg",
+      "bytes": 479485,
+      "sha256": "baea7fc491e7e72825f5e68150699ee176f15ba5eff4dcf29c4e7875fb15a054",
+      "render": {
+        "path": "art/ui/preview/state-obstacles.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "fibonacci",
+      "format": "png",
+      "file": "state-fibonacci.png",
+      "bytes": 186814,
+      "sha256": "1bd44f84f8726994f359f7a85700da72328ee808fc3ee16e03a1cfbade97d68e",
+      "render": {
+        "path": "art/ui/preview/state-fibonacci.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "fibonacci",
+      "format": "svg",
+      "file": "state-fibonacci.svg",
+      "bytes": 469025,
+      "sha256": "940b932b6946d1bf6cce71b1d6d73ccee20e2654a0f5f44316bca9bc7408f6eb",
+      "render": {
+        "path": "art/ui/preview/state-fibonacci.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "daily",
+      "format": "png",
+      "file": "state-daily.png",
+      "bytes": 223103,
+      "sha256": "c383e11fb144ce2f50e2bc86d1e5869ab82a8034accc7ec8a98c2ad0c72582ea",
+      "render": {
+        "path": "art/ui/preview/state-daily.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "daily",
+      "format": "svg",
+      "file": "state-daily.svg",
+      "bytes": 702029,
+      "sha256": "ee5e382bb085b8c1579504bf44ebd50fdf9ea3dea66baa119e3fe467195ba166",
+      "render": {
+        "path": "art/ui/preview/state-daily.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "puzzle-2",
+      "format": "png",
+      "file": "state-puzzle-2.png",
+      "bytes": 181523,
+      "sha256": "27f988ccfeccd0d8ca94f252679b62876c99530db8dde4f79b9ba1f460ad2708",
+      "render": {
+        "path": "art/ui/preview/state-puzzle-2.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "puzzle-2",
+      "format": "svg",
+      "file": "state-puzzle-2.svg",
+      "bytes": 387511,
+      "sha256": "c45d1683a09a1d508872c6663659371d2c565a396d95da0afe2aca1d9420a6b4",
+      "render": {
+        "path": "art/ui/preview/state-puzzle-2.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart-classic",
+      "format": "png",
+      "file": "state-restart-classic.png",
+      "bytes": 173528,
+      "sha256": "5adfe89a44cd432dd1c7246ef8bcff0b0ad2d30b991cb85a24f711440fc347d6",
+      "render": {
+        "path": "art/ui/preview/state-restart-classic.png",
+        "format": "png",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "restart-classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart-classic",
+      "format": "svg",
+      "file": "state-restart-classic.svg",
+      "bytes": 513532,
+      "sha256": "8d8f21d7d87b216ceabc24ecb707cd6107a2de62425c28500ef8fbc1982c458b",
+      "render": {
+        "path": "art/ui/preview/state-restart-classic.svg",
+        "format": "svg",
+        "width": 899,
+        "height": 1750,
+        "scale": 1.0,
+        "board": "restart-classic",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart-sprint",
+      "format": "png",
+      "file": "state-restart-sprint.png",
+      "bytes": 190594,
+      "sha256": "e5b8a627b61b6577d9fa5462b963d9cfb2b8365d8010051e5a5a907afb620ddd",
+      "render": {
+        "path": "art/ui/preview/state-restart-sprint.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart-sprint",
+      "format": "svg",
+      "file": "state-restart-sprint.svg",
+      "bytes": 512692,
+      "sha256": "50ea8cf789aa94f92b96f6ea7d5bf97e1b61a24493a904a65fb912c574e1ae91",
+      "render": {
+        "path": "art/ui/preview/state-restart-sprint.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-sprint",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart-obstacles",
+      "format": "png",
+      "file": "state-restart-obstacles.png",
+      "bytes": 193428,
+      "sha256": "7f77479a4745ea91eefe571d221358541fd8f499ebf67bddd4de58482f5f43c4",
+      "render": {
+        "path": "art/ui/preview/state-restart-obstacles.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart-obstacles",
+      "format": "svg",
+      "file": "state-restart-obstacles.svg",
+      "bytes": 618248,
+      "sha256": "3aabdf594bed8d7dc5a33d8f4f3736d86239a824e6f12ab66c1cb9d736bf5916",
+      "render": {
+        "path": "art/ui/preview/state-restart-obstacles.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-obstacles",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart-fibonacci",
+      "format": "png",
+      "file": "state-restart-fibonacci.png",
+      "bytes": 187541,
+      "sha256": "1da63ca8fddbffb66065ba3bbddd119acf1ddd54042a9085f92ee5ee3b36022d",
+      "render": {
+        "path": "art/ui/preview/state-restart-fibonacci.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart-fibonacci",
+      "format": "svg",
+      "file": "state-restart-fibonacci.svg",
+      "bytes": 607788,
+      "sha256": "b241335bd90b72538eae6722d635a551efcfc1651d36b2de215805da9d008e7c",
+      "render": {
+        "path": "art/ui/preview/state-restart-fibonacci.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-fibonacci",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart-daily",
+      "format": "png",
+      "file": "state-restart-daily.png",
+      "bytes": 208977,
+      "sha256": "0179751e4f3e6b869016d625102aced16307a0d5ba71ea6b6e9f88ec84acb502",
+      "render": {
+        "path": "art/ui/preview/state-restart-daily.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart-daily",
+      "format": "svg",
+      "file": "state-restart-daily.svg",
+      "bytes": 840792,
+      "sha256": "809e9a396a0a6d248d9851ba70fa9ec0bfaeca0d14f616eeeb40c31ab5f0dfb9",
+      "render": {
+        "path": "art/ui/preview/state-restart-daily.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-daily",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart-puzzle-2",
+      "format": "png",
+      "file": "state-restart-puzzle-2.png",
+      "bytes": 191446,
+      "sha256": "0529ea190155076650559111fb981ac0fb9c93aefade3f5b2e63b4f34646c03b",
+      "render": {
+        "path": "art/ui/preview/state-restart-puzzle-2.png",
+        "format": "png",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart-puzzle-2",
+      "format": "svg",
+      "file": "state-restart-puzzle-2.svg",
+      "bytes": 526274,
+      "sha256": "de60773f1df5d3cafd2843e659c1d9e56a89a737e28566a88a8bf8931bf1b242",
+      "render": {
+        "path": "art/ui/preview/state-restart-puzzle-2.svg",
+        "format": "svg",
+        "width": 898,
+        "height": 1751,
+        "scale": 1.0,
+        "board": "restart-puzzle-2",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "file": "prototype.html",
+      "format": "prototype",
+      "bytes": 1335,
+      "sha256": "31790d68849650d212616727326a75a6f42d925c3822d3e09cdeb371b11b3ff7"
+    },
+    {
+      "file": "prototype-data.js",
+      "format": "prototype",
+      "bytes": 4756045,
+      "sha256": "2d927a74dfbfa622cb1917a09d4bfc309ef729d4458d60b447eb73876131be19"
+    },
+    {
+      "file": "prototype-app.js",
+      "format": "prototype",
+      "bytes": 839,
+      "sha256": "229594a97d9824fb4461bb61890a00287736ce89b91f1940128c8e4971f1edee"
+    },
+    {
+      "file": "motion-runtime.js",
+      "format": "prototype",
+      "bytes": 12589,
+      "sha256": "0766e401a89976844601f247af5af611970e3489018441a27d342fb6bb284d69"
+    },
+    {
+      "file": "anime.js",
+      "format": "prototype",
+      "bytes": 118043,
+      "sha256": "8d5b3a58a1f64023a04a4cedeef135a2263b18da04b35177ac13438a0bad033b"
+    },
+    {
+      "file": "xstate.js",
+      "format": "prototype",
+      "bytes": 47486,
+      "sha256": "0c0886f61d9ba134d096ef0aa5b6b0baaff1c3e2cca934f4ff253109826310fb"
+    },
+    {
+      "file": "prototype.css",
+      "format": "prototype",
+      "bytes": 823,
+      "sha256": "576d3b8e73a6c8a3bba2c573aa6422b91808a503420a96b8320e9eaf02cba0e9"
+    },
+    {
+      "file": "NotoSansSC-VF.ttf",
+      "format": "prototype",
+      "bytes": 17773244,
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    },
+    {
+      "file": "NotoSansSC-OFL.txt",
+      "format": "prototype",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "file": "animejs-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1075,
+      "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+    },
+    {
+      "file": "xstate-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1083,
+      "sha256": "542d926d7bbb099785e322d1d5574c539d51942e52ec8adce2be4629ba81fc7f"
+    },
+    {
+      "file": "motion-spec.json",
+      "format": "prototype",
+      "bytes": 15418,
+      "sha256": "445a503cb2f94d728de2e177afd20b9b570a5d376621d29c27163cfcf3906bc8"
+    },
+    {
+      "file": "MotionTokens.kt",
+      "format": "kotlin",
+      "bytes": 4789,
+      "sha256": "427d1d73713cd1ec58c7143a2695e285ac2037a11e8c0d857f519e88b279ffac"
+    }
+  ],
+  "handoff": "handoff.json",
+  "note": "SVG/PNG 是实际渲染；可编辑源是 .haoke-ui.json。目标程序仍需独立运行验证。"
+}

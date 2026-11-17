@@ -1,0 +1,126 @@
+{
+  "project": "ceramic-direct-motion",
+  "revision": 1,
+  "designTokens": {
+    "color.bg": "#F1F6F5",
+    "color.ink": "#173E49",
+    "color.muted": "#627B80",
+    "color.action": "#286B7B",
+    "color.gold": "#C4974E",
+    "space.page": 24,
+    "space.grid": 9,
+    "font.family": "Noto Sans SC"
+  },
+  "motion": {
+    "version": 1,
+    "initial": "home",
+    "states": [
+      {
+        "id": "home",
+        "name": "首页 · 继续游戏",
+        "board": "home",
+        "overrides": {}
+      },
+      {
+        "id": "modes",
+        "name": "玩法 · 五种挑战",
+        "board": "modes",
+        "overrides": {}
+      },
+      {
+        "id": "game",
+        "name": "游戏 · 经典4×4",
+        "board": "game",
+        "overrides": {}
+      },
+      {
+        "id": "restart",
+        "name": "游戏 · 重开确认",
+        "board": "restart",
+        "overrides": {}
+      }
+    ],
+    "transitions": [
+      {
+        "id": "browse-modes",
+        "from": "home",
+        "to": "modes",
+        "node": "open-modes",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "modes-back",
+        "from": "modes",
+        "to": "home",
+        "node": "modes-back",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "continue-game",
+        "from": "home",
+        "to": "game",
+        "node": "continue",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "game-back",
+        "from": "game",
+        "to": "home",
+        "node": "game-back",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "restart-open",
+        "from": "game",
+        "to": "restart",
+        "node": "restart",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "restart-cancel",
+        "from": "restart",
+        "to": "game",
+        "node": "modal-cancel",
+        "trigger": "click",
+        "duration": 140,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "restart-confirm",
+        "from": "restart",
+        "to": "game",
+        "node": "modal-confirm",
+        "trigger": "click",
+        "duration": 140,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "system-back",
+        "from": "restart",
+        "to": "game",
+        "trigger": "back",
+        "duration": 140,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      }
+    ]
+  },
+  "boundary": "Web prototype is not native Android acceptance. Business logic stays in application state."
+}

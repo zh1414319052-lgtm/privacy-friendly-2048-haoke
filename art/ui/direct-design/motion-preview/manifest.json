@@ -1,0 +1,440 @@
+{
+  "project": "ceramic-direct-motion",
+  "revision": 1,
+  "source_sha256": "a49dba5f53675553932c06b464336e397bccd4d296c8cdbdb133638229223d28",
+  "scale": 1.0,
+  "files": [
+    {
+      "board": "home",
+      "format": "png",
+      "file": "home.png",
+      "bytes": 95869,
+      "sha256": "01422e6f3d8422c6732103b32e429838a4d4cc82423896745aa9ae83d011f6fa",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/home.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "home",
+      "format": "svg",
+      "file": "home.svg",
+      "bytes": 617050,
+      "sha256": "b479af7961cf816c6ecd048c41360e91aec9f1bfbeb90e91632f79e7c30dd43d",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/home.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "modes",
+      "format": "png",
+      "file": "modes.png",
+      "bytes": 110889,
+      "sha256": "d9e88fa275be3cfaff24bde16007f12177058bde39b43218cf4cc4784176f2c1",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/modes.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "modes",
+      "format": "svg",
+      "file": "modes.svg",
+      "bytes": 668819,
+      "sha256": "8b90111798b7ee9e405a5fe87ad9ba177e023a3fc6b0dba427442d7c398e3ae7",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/modes.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "game",
+      "format": "png",
+      "file": "game.png",
+      "bytes": 79315,
+      "sha256": "4220e5eeec888e5dac8e6b0f4f39e1ba1580ca05f79ca8a148f64aedf79cefbc",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/game.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "game",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "game",
+      "format": "svg",
+      "file": "game.svg",
+      "bytes": 499427,
+      "sha256": "423dfb9a0a814c8171d3721a2074618ded2b021edccb9f1ae7ce522571248420",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/game.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "game",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "restart",
+      "format": "png",
+      "file": "restart.png",
+      "bytes": 71810,
+      "sha256": "3418f9f8291f9dce8c85c20e0bac86b3f93024423aea4c045572164d3d972541",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/restart.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "restart",
+      "format": "svg",
+      "file": "restart.svg",
+      "bytes": 659117,
+      "sha256": "b96330fd6a519a6a7a9a6e60c587d4fa65e0527ef7e26288b67311d21f57e8ca",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/restart.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "home",
+      "format": "png",
+      "file": "state-home.png",
+      "bytes": 95869,
+      "sha256": "01422e6f3d8422c6732103b32e429838a4d4cc82423896745aa9ae83d011f6fa",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-home.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "home",
+      "format": "svg",
+      "file": "state-home.svg",
+      "bytes": 617050,
+      "sha256": "b479af7961cf816c6ecd048c41360e91aec9f1bfbeb90e91632f79e7c30dd43d",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-home.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "modes",
+      "format": "png",
+      "file": "state-modes.png",
+      "bytes": 110889,
+      "sha256": "d9e88fa275be3cfaff24bde16007f12177058bde39b43218cf4cc4784176f2c1",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-modes.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "modes",
+      "format": "svg",
+      "file": "state-modes.svg",
+      "bytes": 668819,
+      "sha256": "8b90111798b7ee9e405a5fe87ad9ba177e023a3fc6b0dba427442d7c398e3ae7",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-modes.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "modes",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "game",
+      "format": "png",
+      "file": "state-game.png",
+      "bytes": 79315,
+      "sha256": "4220e5eeec888e5dac8e6b0f4f39e1ba1580ca05f79ca8a148f64aedf79cefbc",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-game.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "game",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "game",
+      "format": "svg",
+      "file": "state-game.svg",
+      "bytes": 499427,
+      "sha256": "423dfb9a0a814c8171d3721a2074618ded2b021edccb9f1ae7ce522571248420",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-game.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "game",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "restart",
+      "format": "png",
+      "file": "state-restart.png",
+      "bytes": 71810,
+      "sha256": "3418f9f8291f9dce8c85c20e0bac86b3f93024423aea4c045572164d3d972541",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-restart.png",
+        "format": "png",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "restart",
+      "format": "svg",
+      "file": "state-restart.svg",
+      "bytes": 659117,
+      "sha256": "b96330fd6a519a6a7a9a6e60c587d4fa65e0527ef7e26288b67311d21f57e8ca",
+      "render": {
+        "path": "art/ui/direct-design/motion-preview/state-restart.svg",
+        "format": "svg",
+        "width": 432,
+        "height": 960,
+        "scale": 1.0,
+        "board": "restart",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "app/src/main/assets/ceramic/NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "app/src/main/assets/ceramic/NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "file": "prototype.html",
+      "format": "prototype",
+      "bytes": 1335,
+      "sha256": "31790d68849650d212616727326a75a6f42d925c3822d3e09cdeb371b11b3ff7"
+    },
+    {
+      "file": "prototype-data.js",
+      "format": "prototype",
+      "bytes": 1022296,
+      "sha256": "e85e57281e6c1ba82871edc7e8c874617910c541eaeab8d1a1e5ce6e9eb05d54"
+    },
+    {
+      "file": "prototype-app.js",
+      "format": "prototype",
+      "bytes": 839,
+      "sha256": "229594a97d9824fb4461bb61890a00287736ce89b91f1940128c8e4971f1edee"
+    },
+    {
+      "file": "motion-runtime.js",
+      "format": "prototype",
+      "bytes": 12589,
+      "sha256": "0766e401a89976844601f247af5af611970e3489018441a27d342fb6bb284d69"
+    },
+    {
+      "file": "anime.js",
+      "format": "prototype",
+      "bytes": 118043,
+      "sha256": "8d5b3a58a1f64023a04a4cedeef135a2263b18da04b35177ac13438a0bad033b"
+    },
+    {
+      "file": "xstate.js",
+      "format": "prototype",
+      "bytes": 47486,
+      "sha256": "0c0886f61d9ba134d096ef0aa5b6b0baaff1c3e2cca934f4ff253109826310fb"
+    },
+    {
+      "file": "prototype.css",
+      "format": "prototype",
+      "bytes": 823,
+      "sha256": "576d3b8e73a6c8a3bba2c573aa6422b91808a503420a96b8320e9eaf02cba0e9"
+    },
+    {
+      "file": "NotoSansSC-VF.ttf",
+      "format": "prototype",
+      "bytes": 17773244,
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    },
+    {
+      "file": "NotoSansSC-OFL.txt",
+      "format": "prototype",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "file": "animejs-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1075,
+      "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+    },
+    {
+      "file": "xstate-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1083,
+      "sha256": "542d926d7bbb099785e322d1d5574c539d51942e52ec8adce2be4629ba81fc7f"
+    },
+    {
+      "file": "motion-spec.json",
+      "format": "prototype",
+      "bytes": 3033,
+      "sha256": "1fce2669673a754cf6a607842f27225d217cbc18d2b0bb7f09e7e3113142bdff"
+    },
+    {
+      "file": "MotionTokens.kt",
+      "format": "kotlin",
+      "bytes": 910,
+      "sha256": "51f8a2ddd73778ec08865a16267c1ea9066a458d8284a9e1cfd036c6dd2d3d79"
+    }
+  ],
+  "handoff": "handoff.json",
+  "note": "SVG/PNG 是实际渲染；可编辑源是 .haoke-ui.json。目标程序仍需独立运行验证。"
+}

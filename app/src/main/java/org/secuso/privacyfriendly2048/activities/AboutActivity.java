@@ -24,7 +24,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+import org.secuso.privacyfriendly2048.activities.helper.LocalizedActivity;
 
 import org.secuso.privacyfriendly2048.BuildConfig;
 import org.secuso.privacyfriendly2048.R;
@@ -37,11 +37,12 @@ import org.secuso.privacyfriendly2048.activities.helper.BaseActivity;
  * @author Julian Wadephul and Saskia Jacob
  * @version 20180910
  */
-public class AboutActivity extends AppCompatActivity {
+public class AboutActivity extends LocalizedActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        setTitle(getString(R.string.about));
 
         ActionBar ab = getSupportActionBar();
         if (ab != null) {
@@ -58,7 +59,10 @@ public class AboutActivity extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.secusoWebsite)).setMovementMethod(LinkMovementMethod.getInstance());
         ((TextView) findViewById(R.id.githubURL)).setMovementMethod(LinkMovementMethod.getInstance());
-        ((TextView) findViewById(R.id.textFieldVersionName)).setText(getString(R.string.version_number, BuildConfig.VERSION_NAME));
+        if (!getString(R.string.launcher_name).equals(getString(R.string.upstream_name))) {
+            findViewById(R.id.upstreamName).setVisibility(android.view.View.VISIBLE);
+        }
+        ((TextView) findViewById(R.id.textFieldVersionName)).setText(getString(R.string.version) + " " + getString(R.string.version_number, BuildConfig.VERSION_NAME));
     }
 
     //@Override

@@ -38,32 +38,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:text="@string/app_name_long" />
+            android:text="@string/launcher_name" android:textStyle="bold" />
 
-        <RelativeLayout
-            android:layout_width="202dp"
+        <TextView
+            android:id="@+id/upstreamName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:gravity="center">
+            android:visibility="gone"
+            android:text="@string/upstream_name" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="56dp"
-                android:text="@string/version" />
-
-            <TextView
-                android:id="@+id/textFieldVersionName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="64dp" />
-
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/textFieldVersionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp" />
 
         <TextView
             android:layout_width="wrap_content"

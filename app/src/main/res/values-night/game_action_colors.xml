@@ -1,0 +1,5 @@
+<resources>
+    <color name="secondary_game_surface">#192932</color>
+    <color name="secondary_game_border">#7794A7</color>
+    <color name="secondary_game_text">#D3ECFA</color>
+</resources>

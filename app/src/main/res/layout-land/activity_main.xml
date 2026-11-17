@@ -39,6 +39,7 @@
 
                 <ImageButton
                     android:id="@+id/btn_prev"
+                    android:contentDescription="@string/previous_board"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -65,6 +66,7 @@
 
                 <ImageButton
                     android:id="@+id/btn_next"
+                    android:contentDescription="@string/next_board"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_modes">新玩法</string>
+    <string name="mode_sprint">3 × 3 速玩</string>
+    <string name="mode_puzzle">残局挑战</string>
+    <string name="mode_obstacles">障碍棋盘</string>
+    <string name="mode_fibonacci">斐波那契</string>
+    <string name="mode_daily">每日挑战</string>
+    <string name="mode_sprint_desc">九格棋盘，先拼出 256，再挑战 512。</string>
+    <string name="mode_puzzle_desc">固定开局、限步解题。滑动后不会生成新方块。</string>
+    <string name="mode_obstacles_desc">两块石板隔开棋盘，数字只能在各自的区段滑动。</string>
+    <string name="mode_fibonacci_desc">合并数列中相邻的数字：1 + 1 → 2、1 + 2 → 3、2 + 3 → 5。</string>
+    <string name="mode_daily_desc">每天一道固定题，可以反复挑战最少步数。</string>
+    <string name="challenge_pick_level">选择残局</string>
+    <string name="challenge_level">第 %1$d 关</string>
+    <string name="challenge_level_count">共 %1$d 关 · 已解 %2$d 关</string>
+    <string name="challenge_resume">可续局</string>
+    <string name="challenge_best_score">最高 %1$d 分</string>
+    <string name="challenge_best_moves">最少 %1$d 步</string>
+    <string name="challenge_score_label">得分</string>
+    <string name="challenge_record_label">最高分</string>
+    <string name="challenge_remaining_label">剩余步数</string>
+    <string name="challenge_record_moves_label">最少步数</string>
+    <string name="challenge_attempts_label">步数</string>
+    <string name="challenge_restart">重开</string>
+    <string name="challenge_restart_question">重新开始这局？</string>
+    <string name="challenge_restart_detail">棋盘将恢复开局状态，历史最佳成绩会保留。</string>
+    <string name="challenge_next">下一关</string>
+    <string name="challenge_list">残局列表</string>
+    <string name="challenge_goal_tile">拼出 %1$d</string>
+    <string name="challenge_goal_space">腾出至少 %1$d 个空格</string>
+    <string name="challenge_goal_score">达到 %1$d 分</string>
+    <string name="challenge_move_limit">限 %1$d 步</string>
+    <string name="challenge_no_spawn">滑动后不会生成新方块。</string>
+    <string name="challenge_solved">用 %1$d 步解开</string>
+    <string name="challenge_out_of_moves">步数已用完，可以撤销或重试。</string>
+    <string name="challenge_stuck">已无可走步数，可以撤销或重开。</string>
+    <string name="challenge_sprint_half">已拼出 256，继续挑战 512。</string>
+    <string name="challenge_reached">已拼出 %1$d，可以继续挑战更大的数字。</string>
+    <string name="challenge_empty_cell">空格</string>
+    <string name="challenge_stone_cell">石板，方块不可通过。</string>
+    <string name="challenge_save_error">暂时无法保存进度，请重试。</string>
+    <string name="challenge_board_label">游戏棋盘，滑动可移动方块。</string>
+</resources>

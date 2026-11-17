@@ -1,0 +1,20 @@
+<resources>
+    <item name="challenge_modes_action" type="id" />
+    <item name="challenge_card_sprint" type="id" />
+    <item name="challenge_card_puzzle" type="id" />
+    <item name="challenge_card_obstacles" type="id" />
+    <item name="challenge_card_fibonacci" type="id" />
+    <item name="challenge_card_daily" type="id" />
+    <item name="challenge_board" type="id" />
+    <item name="challenge_status" type="id" />
+    <item name="challenge_score" type="id" />
+    <item name="challenge_record" type="id" />
+    <item name="challenge_moves" type="id" />
+    <item name="challenge_undo" type="id" />
+    <item name="challenge_restart_button" type="id" />
+    <item name="challenge_next_level" type="id" />
+    <item name="challenge_up" type="id" />
+    <item name="challenge_down" type="id" />
+    <item name="challenge_left" type="id" />
+    <item name="challenge_right" type="id" />
+</resources>

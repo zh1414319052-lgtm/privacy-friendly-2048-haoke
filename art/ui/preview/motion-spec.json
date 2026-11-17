@@ -1,0 +1,618 @@
+{
+  "project": "privacy-friendly-2048-ceramic",
+  "revision": 4,
+  "designTokens": {
+    "color.bg": "#E8F5FA",
+    "color.ink": "#133B4B",
+    "color.muted": "#52727B",
+    "motion.fast": 115,
+    "motion.page": 180
+  },
+  "motion": {
+    "version": 1,
+    "initial": "home",
+    "states": [
+      {
+        "id": "home",
+        "board": "home",
+        "name": "首页",
+        "overrides": {}
+      },
+      {
+        "id": "modes",
+        "board": "modes",
+        "name": "新玩法",
+        "overrides": {}
+      },
+      {
+        "id": "levels",
+        "board": "levels",
+        "name": "残局列表",
+        "overrides": {}
+      },
+      {
+        "id": "classic",
+        "board": "classic",
+        "name": "经典棋盘",
+        "overrides": {}
+      },
+      {
+        "id": "puzzle",
+        "board": "puzzle",
+        "name": "残局棋盘",
+        "overrides": {}
+      },
+      {
+        "id": "solved",
+        "board": "solved",
+        "name": "通关反馈",
+        "overrides": {}
+      },
+      {
+        "id": "restart",
+        "board": "restart",
+        "name": "重开确认",
+        "overrides": {}
+      },
+      {
+        "id": "dark",
+        "board": "dark",
+        "name": "横屏深色棋盘",
+        "overrides": {}
+      },
+      {
+        "id": "sprint",
+        "board": "sprint",
+        "name": "3×3 速玩",
+        "overrides": {}
+      },
+      {
+        "id": "obstacles",
+        "board": "obstacles",
+        "name": "障碍棋盘",
+        "overrides": {}
+      },
+      {
+        "id": "fibonacci",
+        "board": "fibonacci",
+        "name": "斐波那契",
+        "overrides": {}
+      },
+      {
+        "id": "daily",
+        "board": "daily",
+        "name": "每日挑战",
+        "overrides": {}
+      },
+      {
+        "id": "puzzle-2",
+        "board": "puzzle-2",
+        "name": "第 2 关",
+        "overrides": {}
+      },
+      {
+        "id": "restart-classic",
+        "board": "restart-classic",
+        "name": "经典棋盘 · 重开确认",
+        "overrides": {}
+      },
+      {
+        "id": "restart-sprint",
+        "board": "restart-sprint",
+        "name": "3×3 速玩 · 重开确认",
+        "overrides": {}
+      },
+      {
+        "id": "restart-obstacles",
+        "board": "restart-obstacles",
+        "name": "障碍棋盘 · 重开确认",
+        "overrides": {}
+      },
+      {
+        "id": "restart-fibonacci",
+        "board": "restart-fibonacci",
+        "name": "斐波那契 · 重开确认",
+        "overrides": {}
+      },
+      {
+        "id": "restart-daily",
+        "board": "restart-daily",
+        "name": "每日挑战 · 重开确认",
+        "overrides": {}
+      },
+      {
+        "id": "restart-puzzle-2",
+        "board": "restart-puzzle-2",
+        "name": "第 2 关 · 重开确认",
+        "overrides": {}
+      }
+    ],
+    "transitions": [
+      {
+        "id": "open-modes",
+        "from": "home",
+        "to": "modes",
+        "trigger": "click",
+        "node": "modes-action",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "home-continue",
+        "from": "home",
+        "to": "classic",
+        "trigger": "click",
+        "node": "continue",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "modes-puzzle",
+        "from": "modes",
+        "to": "levels",
+        "trigger": "click",
+        "node": "mode-1",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-level",
+        "from": "levels",
+        "to": "puzzle",
+        "trigger": "click",
+        "node": "level-0",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "restart-open",
+        "from": "puzzle",
+        "to": "restart",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "cancel-restart",
+        "from": "restart",
+        "to": "puzzle",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "do-restart",
+        "from": "restart",
+        "to": "puzzle",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-modes",
+        "from": "modes",
+        "to": "home",
+        "trigger": "back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-classic",
+        "from": "classic",
+        "to": "home",
+        "trigger": "back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-levels",
+        "from": "levels",
+        "to": "modes",
+        "trigger": "back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-puzzle",
+        "from": "puzzle",
+        "to": "levels",
+        "trigger": "back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-solved",
+        "from": "solved",
+        "to": "levels",
+        "trigger": "back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-restart",
+        "from": "restart",
+        "to": "puzzle",
+        "trigger": "back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "home-start",
+        "from": "home",
+        "to": "classic",
+        "trigger": "click",
+        "node": "start-game",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "tap-back-modes",
+        "from": "modes",
+        "to": "home",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "tap-back-levels",
+        "from": "levels",
+        "to": "modes",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "tap-back-classic",
+        "from": "classic",
+        "to": "home",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "tap-back-puzzle",
+        "from": "puzzle",
+        "to": "levels",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "tap-back-solved",
+        "from": "solved",
+        "to": "levels",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "tap-back-dark",
+        "from": "dark",
+        "to": "modes",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-sprint",
+        "from": "modes",
+        "to": "sprint",
+        "trigger": "click",
+        "node": "mode-0",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-sprint",
+        "from": "sprint",
+        "to": "modes",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-obstacles",
+        "from": "modes",
+        "to": "obstacles",
+        "trigger": "click",
+        "node": "mode-2",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-obstacles",
+        "from": "obstacles",
+        "to": "modes",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-fibonacci",
+        "from": "modes",
+        "to": "fibonacci",
+        "trigger": "click",
+        "node": "mode-3",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-fibonacci",
+        "from": "fibonacci",
+        "to": "modes",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-daily",
+        "from": "modes",
+        "to": "daily",
+        "trigger": "click",
+        "node": "mode-4",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-daily",
+        "from": "daily",
+        "to": "modes",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-level-2",
+        "from": "levels",
+        "to": "puzzle-2",
+        "trigger": "click",
+        "node": "level-1",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "next-example",
+        "from": "solved",
+        "to": "puzzle-2",
+        "trigger": "click",
+        "node": "next-level",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "back-level-2",
+        "from": "puzzle-2",
+        "to": "levels",
+        "trigger": "click",
+        "node": "toolbar-back",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-open-classic",
+        "from": "classic",
+        "to": "restart-classic",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-cancel-classic",
+        "from": "restart-classic",
+        "to": "classic",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-confirm-classic",
+        "from": "restart-classic",
+        "to": "classic",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-open-sprint",
+        "from": "sprint",
+        "to": "restart-sprint",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-cancel-sprint",
+        "from": "restart-sprint",
+        "to": "sprint",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-confirm-sprint",
+        "from": "restart-sprint",
+        "to": "sprint",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-open-obstacles",
+        "from": "obstacles",
+        "to": "restart-obstacles",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-cancel-obstacles",
+        "from": "restart-obstacles",
+        "to": "obstacles",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-confirm-obstacles",
+        "from": "restart-obstacles",
+        "to": "obstacles",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-open-fibonacci",
+        "from": "fibonacci",
+        "to": "restart-fibonacci",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-cancel-fibonacci",
+        "from": "restart-fibonacci",
+        "to": "fibonacci",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-confirm-fibonacci",
+        "from": "restart-fibonacci",
+        "to": "fibonacci",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-open-daily",
+        "from": "daily",
+        "to": "restart-daily",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-cancel-daily",
+        "from": "restart-daily",
+        "to": "daily",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-confirm-daily",
+        "from": "restart-daily",
+        "to": "daily",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-open-puzzle-2",
+        "from": "puzzle-2",
+        "to": "restart-puzzle-2",
+        "trigger": "click",
+        "node": "reset-act",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-cancel-puzzle-2",
+        "from": "restart-puzzle-2",
+        "to": "puzzle-2",
+        "trigger": "click",
+        "node": "cancel",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      },
+      {
+        "id": "reset-confirm-puzzle-2",
+        "from": "restart-puzzle-2",
+        "to": "puzzle-2",
+        "trigger": "click",
+        "node": "confirm",
+        "easing": "outCubic",
+        "duration": 180,
+        "pageEffect": "fade"
+      }
+    ]
+  },
+  "boundary": "Web prototype is not native Android acceptance. Business logic stays in application state."
+}

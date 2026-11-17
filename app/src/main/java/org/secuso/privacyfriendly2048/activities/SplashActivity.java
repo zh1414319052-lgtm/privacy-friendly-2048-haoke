@@ -21,7 +21,7 @@ package org.secuso.privacyfriendly2048.activities;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import org.secuso.privacyfriendly2048.activities.helper.LocalizedActivity;
 
 import org.secuso.privacyfriendly2048.helpers.FirstLaunchManager;
 
@@ -33,7 +33,7 @@ import org.secuso.privacyfriendly2048.helpers.FirstLaunchManager;
  * @version 20180910
  */
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends LocalizedActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

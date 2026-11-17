@@ -35,7 +35,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import org.secuso.privacyfriendly2048.activities.helper.LocalizedActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -52,7 +52,7 @@ import org.secuso.privacyfriendly2048.helpers.FirstLaunchManager;
  * @author Julian Wadephul and Saskia Jacob
  * @version 20180910
  */
-public class TutorialActivity extends AppCompatActivity {
+public class TutorialActivity extends LocalizedActivity {
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
